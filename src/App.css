@@ -14,23 +14,6 @@ span {
   vertical-align: middle;
 }
 
-.parent {
-  position: relative;
-}
-
-.parent2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.child {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .top-bar {
   margin: 0em;
   padding: .5em;
@@ -48,14 +31,14 @@ span {
   padding: 0em;
   opacity: .65;
   height: 15em;
+  position: relative;
 }
 
 .header-text {
-  text-align: center; 
-  margin: 0em;
+  vertical-align: center;
+  text-align: center;
   padding: 1em;
-  padding-top: 10px;
-  font-size: 10vh;
+  margin: 0em;
 }
 
 .leaderboard-header {
