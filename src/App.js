@@ -12,7 +12,7 @@ import NavBar from './NavBar';
 function App() {
   return (
     <>
-      <NavBar />
+      <NavBar className="nav"/>
       <Route exact path="/" component={HomeStats}/>
       <Route exact path="/gameSetup" component={GameSetup}/>
       <Route exact path="/gameplay" component={Gameplay}/>

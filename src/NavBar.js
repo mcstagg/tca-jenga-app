@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return(
-      <ul>
-        <li>
+      <div className="row nav">
+        <h6 className="col 3">
           <Link to='/'>Home-Stats</Link>   
-        </li>
-        <li>
+        </h6>
+        <h6 className="col 3">
           <Link to='/gameSetup'>Game Setup</Link>   
-        </li>
-        <li>
+        </h6>
+        <h6 className="col 3">
           <Link to='/gameplay'>GamePlay</Link>   
-        </li>
-        <li>
+        </h6>
+        <h6 className="col 3">
           <Link to='/postGame'>PostGame</Link>   
-        </li>
-      </ul>
+        </h6>
+      </div>
     )
 }
 
