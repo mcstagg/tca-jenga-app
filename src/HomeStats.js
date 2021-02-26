@@ -1,5 +1,8 @@
 import React from 'react';
 import jenga from './tower.PNG';
+import { Button } from '@material-ui/core';
+import Icon from '@material-ui/core/Icon';
+import { makeStyles } from '@material-ui/core/styles';
 
 const HomeStats = () => {
   return (
@@ -27,8 +30,15 @@ const HomeStats = () => {
 
     <div className="row blue darken-1 leaderboard-header">
       <h4 className="col s6 lb-header-text">Leaderboard</h4>
-      <a href="/gameSetup" className="waves-effect waves-light btn col 2 offset-s2"><i className="material-icons right">jenga!</i>Play</a>
+      <Button variant="contained" color="secondary" className="col 3">Play JENGA!</Button>
+      <a href="/gameSetup" className="waves-effect waves-light btn col 3"><i className="material-icons right">jenga!</i>Play</a>
     </div>
+
+    <Button
+        variant="contained"
+        color="primary"
+        endIcon={<Icon>send</Icon>}
+    >Play JENGA!</Button>
 
     <table>
       <thead>
