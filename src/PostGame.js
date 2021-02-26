@@ -4,7 +4,6 @@ import jenga from './tower.PNG';
 const PostGame = () => {
   return (
     <>
-    <h1>Post Game Page</h1>
     <div className="row blue darken-1 top-bar">
         <div className="col s1">1</div>
         <div className="col s1">2</div>
@@ -27,13 +26,18 @@ const PostGame = () => {
       </div>
 
       <div className="row blue darken-1 leaderboard-header">
-        <h4 className="col s6 lb-header-text">Leaderboard</h4>
-        <a href="/GameSetup.js" className="waves-effect waves-light btn col 2 offset-s2"><i className="material-icons right">jenga!</i>Play</a>
+        <h4 className="col s6 lb-header-text">Post Game</h4>
+        <a href="/" className="waves-effect waves-light btn col 2 offset-s2"><i className="material-icons right"></i>Home-Stats</a>
+      </div>
+
+      <div>
+        <h2>Winner!</h2>
+        <h3>Player 1</h3>
       </div>
 
       <div className="row blue darken-1 leaderboard-header">
-        <h4 className="col s6 lb-header-text">Ready to Start?</h4>
-        <a className="waves-effect waves-light btn col 2 offset-s2"><i className="material-icons right">jenga!</i>Play</a>
+        <h4 className="col s6 lb-header-text">Rematch?</h4>
+        <a href="/gameplay" className="waves-effect waves-light btn col 2 offset-s2"><i className="material-icons right">jenga!</i>Play</a>
       </div>
     </>
   )

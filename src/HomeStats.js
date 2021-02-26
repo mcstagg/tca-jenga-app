@@ -27,7 +27,7 @@ const HomeStats = () => {
 
     <div className="row blue darken-1 leaderboard-header">
       <h4 className="col s6 lb-header-text">Leaderboard</h4>
-      <a href="/GameSetup.js" className="waves-effect waves-light btn col 2 offset-s2"><i className="material-icons right">jenga!</i>Play</a>
+      <a href="/gameSetup" className="waves-effect waves-light btn col 2 offset-s2"><i className="material-icons right">jenga!</i>Play</a>
     </div>
 
     <table>
@@ -160,7 +160,7 @@ const HomeStats = () => {
 
     <div className="row blue darken-1 leaderboard-header">
       <h4 className="col s6 lb-header-text">Ready to Start?</h4>
-      <a className="waves-effect waves-light btn col 2 offset-s2"><i className="material-icons right">jenga!</i>Play</a>
+      <a href="/gameSetup" className="waves-effect waves-light btn col 2 offset-s2"><i className="material-icons right">jenga!</i>Play</a>
     </div>
     </>
   )    
