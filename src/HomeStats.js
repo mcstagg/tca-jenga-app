@@ -22,10 +22,10 @@ const HomeStats = () => {
       <div className="col s1">12</div>
     </div>
 
-    <div className="row deep-orange darken-1 header">
-      <img src={jenga} alt="jenga" className="col s3 header-towers" />
-      <h1 className="col s6 white-text header-text">Jenga <br/> Companion</h1>
-      <img src={jenga} alt="jenga" className="col s3 header-towers" />
+    <div className="row deep-orange darken-1 header valign-wrapper">
+      <img src={jenga} alt="jenga" className="col s3 m3 l2 header-towers" />
+      <h1 className="col s6 m6 l8 white-text header-text">Jenga <br/> Companion</h1>
+      <img src={jenga} alt="jenga" className="col s3 m3 l2 header-towers" />
     </div>
 
     <div className="row blue darken-1 leaderboard-header">
