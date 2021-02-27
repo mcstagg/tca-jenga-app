@@ -23,22 +23,15 @@ const HomeStats = () => {
     </div>
 
     <div className="row deep-orange darken-1 header valign-wrapper">
-      <img src={jenga} alt="jenga" className="col s3 m3 l2 header-towers" />
+      <img src={jenga} alt="jenga" className="col s3 m3 l2 header-towers p-0" />
       <h1 className="col s6 m6 l8 white-text header-text">Jenga <br/> Companion</h1>
-      <img src={jenga} alt="jenga" className="col s3 m3 l2 header-towers" />
+      <img src={jenga} alt="jenga" className="col s3 m3 l2 header-towers p-0" />
     </div>
 
-    <div className="row blue darken-1 leaderboard-header">
-      <h4 className="col s6 lb-header-text">Leaderboard</h4>
-      <Button variant="contained" color="secondary" className="col 3">Play JENGA!</Button>
-      <a href="/gameSetup" className="waves-effect waves-light btn col 3"><i className="material-icons right">jenga!</i>Play</a>
+    <div className="row blue darken-1 leaderboard-header valign-wrapper">
+      <h4 className="col s3 lb-header-text m-0">Leaderboard</h4>
+      <a href="/gameSetup" className="waves-effect waves-light btn col s3 offset-s6">Play JENGA!<i className="large material-icons">play_arrow</i></a>
     </div>
-
-    <Button
-        variant="contained"
-        color="primary"
-        endIcon={<Icon>send</Icon>}
-    >Play JENGA!</Button>
 
     <table>
       <thead>

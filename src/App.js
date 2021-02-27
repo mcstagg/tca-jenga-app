@@ -11,13 +11,13 @@ import NavBar from './NavBar';
 
 function App() {
   return (
-    <>
+    <div className="container">
       <NavBar className="nav"/>
       <Route exact path="/" component={HomeStats}/>
       <Route exact path="/gameSetup" component={GameSetup}/>
       <Route exact path="/gameplay" component={Gameplay}/>
       <Route exact path="/postGame" component={PostGame}/>
-    </>
+    </div>
   );
 }
 

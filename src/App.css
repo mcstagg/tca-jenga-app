@@ -14,6 +14,18 @@
   padding: 0em;
 }
 
+.p-0 {
+  padding: 0 !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.arrow {
+  font-size: 2.5em !important;
+}
+
 .top-bar {
   margin: 0em;
   padding: .5em;
@@ -21,7 +33,8 @@
 }
 
 .header {
-  margin: 1em; 
+  margin-top: 1em;
+  margin-bottom: 1em;
   padding: 0em;
   height: 15em;
 }
@@ -53,8 +66,6 @@
 }
 
 .lb-header-text {
-  margin: 0em;
-  padding: 0em; 
   text-align: center;
   height: 1em;
 }
