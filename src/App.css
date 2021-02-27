@@ -9,6 +9,10 @@
   color: white;
 }
 
+body {
+  font-family: 'Oi', cursive;
+}
+
 .nav {
   text-align: center;
   padding: 0em;
