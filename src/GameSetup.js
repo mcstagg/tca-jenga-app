@@ -1,6 +1,7 @@
 import React from 'react';
 import jenga from './tower.PNG';
 import { Checkbox } from '@material-ui/core';
+import Header from './Header';
 
 const GameSetup = () => {
   return (
@@ -20,11 +21,7 @@ const GameSetup = () => {
       <div className="col s1">12</div>
     </div>
 
-    <div className="row deep-orange darken-1 header">
-      <img src={jenga} alt="jenga" className="col s3 header-towers" />
-      <h1 className="col s6 white-text header-text">Jenga <br/> Companion</h1>
-      <img src={jenga} alt="jenga" className="col s3 header-towers" />
-    </div>
+    <Header />
 
     <div className="row blue darken-1 leaderboard-header">
       <h4 className="lb-header-text">GameSetup</h4>

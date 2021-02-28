@@ -3,6 +3,7 @@ import jenga from './tower.PNG';
 import { Button } from '@material-ui/core';
 import Icon from '@material-ui/core/Icon';
 import { makeStyles } from '@material-ui/core/styles';
+import Header from './Header';
 
 const HomeStats = () => {
   return (
@@ -22,11 +23,7 @@ const HomeStats = () => {
       <div className="col s1">12</div>
     </div>
 
-    <div className="row deep-orange darken-1 header valign-wrapper">
-      <img src={jenga} alt="jenga" className="col s3 m3 l2 header-towers p-0" />
-      <h1 className="col s6 m6 l8 white-text header-text">Jenga <br/> Companion</h1>
-      <img src={jenga} alt="jenga" className="col s3 m3 l2 header-towers p-0" />
-    </div>
+    <Header />
 
     <div className="row blue darken-1 leaderboard-header valign-wrapper">
       <h4 className="col s3 lb-header-text m-0">Leaderboard</h4>
