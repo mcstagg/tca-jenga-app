@@ -1,18 +1,11 @@
 import React from 'react';
-import jenga from './tower.PNG';
-import { Button } from '@material-ui/core';
-import Icon from '@material-ui/core/Icon';
-import { makeStyles } from '@material-ui/core/styles';
-import Header from './Header';
+import Leader from './Leader';
 
 const HomeStats = () => {
+
   return (
     <>
-      <div className="row blue darken-1 leaderboard-header valign-wrapper">
-        <h4 className="col s3 lb-header-text m-0">Leaderboard</h4>
-        <a href="/gameSetup" className="waves-effect waves-light btn col s3 offset-s6">Play JENGA!<i className="large material-icons">play_arrow</i></a>
-      </div>
-  
+      <Leader text="Leaderboard" btnlink="./gameSetup" btntext="Play JENGA!" />
       <table>
         <thead>
           <tr>
@@ -141,9 +134,9 @@ const HomeStats = () => {
         </tbody>
       </table>
 
-      <div className="row blue darken-1 leaderboard-header">
-        <h4 className="col s6 lb-header-text">Ready to Start?</h4>
-        <a href="/gameSetup" className="waves-effect waves-light btn col 2 offset-s2"><i className="material-icons right">jenga!</i>Play</a>
+      <div className="row blue darken-1 leaderboard-header valign-wrapper">
+        <h4 className="col s6 lb-header-text m-0">Ready to Start?</h4>
+        <a href="/gameSetup" className="waves-effect waves-light btn-large col s3 offset-s4 valign-wrapper">Play JENGA!<i className="large material-icons"></i></a>
       </div>
     </>
   )    

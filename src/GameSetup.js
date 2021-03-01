@@ -1,12 +1,11 @@
 import React from 'react';
 import { Checkbox } from '@material-ui/core';
+import Leader from './Leader';
 
 const GameSetup = () => {
   return (
     <>
-      <div className="row blue darken-1 leaderboard-header">
-        <h4 className="lb-header-text">GameSetup</h4>
-      </div>
+      <Leader text="Game Setup" btnlink="./gameplay" btntext="Start Game" />
 
       <div className="container">
         <h5>Add a Player</h5>

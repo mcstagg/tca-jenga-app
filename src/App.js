@@ -1,5 +1,4 @@
 import React from 'react';
-import jenga from './tower.PNG';
 import './materialize.css';
 import './App.css';
 import HomeStats from './HomeStats';
