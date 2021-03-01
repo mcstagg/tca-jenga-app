@@ -3,7 +3,6 @@ import React from 'react';
 const Table = (props) => {
   
   return (
-
     <table>
       <thead>
         <tr>
@@ -83,7 +82,7 @@ const Table = (props) => {
           <td>42%</td>
           <td>39 Rows</td>
           <td>4 Games</td>
-          <td> Days</td>
+          <td>101 Days</td>
         </tr>
         <tr>
           <td>7th Place</td>

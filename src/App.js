@@ -5,7 +5,7 @@ import HomeStats from './HomeStats';
 import GameSetup from './GameSetup'; 
 import Gameplay from './Gameplay'; 
 import PostGame from './PostGame'; 
-import {Route, Link} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import NavBar from './NavBar';
 import Header from './Header';
 
