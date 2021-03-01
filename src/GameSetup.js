@@ -8,7 +8,7 @@ const GameSetup = () => {
     <>
       <Leader text="Game Setup" btnlink="./gameplay" btntext="Start Game" column="col s6" />
       <SetupForm />
-      <Leader text="Prepare for Jenga!" btnlink="./gameplay" btntext="Start Game" att="pl-2" column="col s6" />
+      <Leader text="Prepare for Jenga!" btnlink="./gameplay" btntext="Start Game" atts="pl-2" column="col s8" />
     </>
   )
 }

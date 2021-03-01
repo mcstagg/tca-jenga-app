@@ -8,7 +8,7 @@ const HomeStats = () => {
     <>
       <Leader text="Leaderboard" btnlink="./gameSetup" btntext="Play JENGA!" />
       <Table />
-      <Leader text="Ready to Start?" btnlink="./gameSetup" btntext="Play JENGA!" />
+      <Leader text="Ready to Start?" btnlink="./gameSetup" btntext="Play JENGA!" atts="pl-3"/>
     </>
   )    
 }   
