@@ -1,7 +1,5 @@
 import React from 'react';
-import jenga from './tower.PNG';
 import { Checkbox } from '@material-ui/core';
-import Header from './Header';
 
 const GameSetup = () => {
   return (

@@ -7,16 +7,16 @@ const NavBar = () => {
     return(
       <div className="row nav blue darken-1">
         <h6 className="col s3">
-          <Link to='/'>Home-Stats</Link>   
+          <Link to='/' className="nav">Home-Stats</Link>   
         </h6>
         <h6 className="col s3">
-          <Link to='/gameSetup'>Game Setup</Link>   
+          <Link to='/gameSetup' className="nav">Game Setup</Link>   
         </h6>
         <h6 className="col s3">
-          <Link to='/gameplay'>GamePlay</Link>   
+          <Link to='/gameplay' className="nav">GamePlay</Link>   
         </h6>
         <h6 className="col s3">
-          <Link to='/postGame'>PostGame</Link>   
+          <Link to='/postGame' className="nav">PostGame</Link>   
         </h6>
       </div>
     )
