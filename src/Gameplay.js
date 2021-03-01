@@ -7,9 +7,10 @@ const Gameplay = () => {
 
   return (
     <>
-      <Leader text="Gameplay" btnlink="./postGame" btntext="JENGA!" />
+      <Leader text="Gameplay" btnlink="./gameplay" btntext="Make Move" />
       <Game />
-      <GameBar />
+      <Leader text="Gameplay" btnlink="./gameplay" btntext="Make Move" />
+      <GameBar  text="Gameplay" btnlink="./postGame" btntext="JENGA!"/>
     </>
   )
 }
