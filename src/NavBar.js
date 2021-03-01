@@ -5,7 +5,7 @@ import './App.css';
 
 const NavBar = () => {
     return(
-      <div className="row nav">
+      <div className="row nav blue darken-1">
         <h6 className="col s3">
           <Link to='/'>Home-Stats</Link>   
         </h6>
