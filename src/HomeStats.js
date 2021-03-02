@@ -6,9 +6,9 @@ const HomeStats = () => {
 
   return (
     <>
-      <Leader text="Leaderboard" btnlink="./gameSetup" btntext="Play JENGA!" />
+      <Leader h4text="Leaderboard" moveButton={<a href="/gameSetup" className={`waves-effect waves-light btn-large col s3 offset-s5 valign-wrapper`}>PLAY JENGA!<i className="large material-icons"></i></a>} />
       <Table />
-      <Leader text="Ready to Start?" btnlink="./gameSetup" btntext="Play JENGA!" atts="pl-3"/>
+      <Leader h4text="Ready to Start?" atts="pl-3" moveButton={<a href="/gameSetup" className={`waves-effect waves-light btn-large col s3 offset-s2 valign-wrapper`}>PLAY JENGA!<i className="large material-icons"></i></a>}/>
     </>
   )    
 }   

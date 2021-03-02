@@ -6,9 +6,9 @@ import './App.css';
 const GameSetup = () => {
   return (
     <>
-      <Leader text="Game Setup" btnlink="./gameplay" btntext="Start Game" column="col s6" />
+      <Leader h4text="Game Setup" h4textcol="col s4" moveButton={<a href="/gameplay" className={`waves-effect waves-light btn-large col s3 offset-s5 valign-wrapper`}>START GAME<i className="large material-icons"></i></a>}/>
       <SetupForm />
-      <Leader text="Prepare for Jenga!" btnlink="./gameplay" btntext="Start Game" atts="pl-2" column="col s8" />
+      <Leader h4text="Prepare for Jenga!" h4textcol="col s8" atts="pl-2" moveButton={<a href="/gameplay" className={`waves-effect waves-light btn-large col s3 valign-wrapper`}>START GAME<i className="large material-icons"></i></a>} />
     </>
   )
 }
