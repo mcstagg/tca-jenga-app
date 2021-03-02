@@ -8,7 +8,7 @@ const SetupForm = () => {
       <h6>Player Name:</h6>
       <input type="textBox"></input>
       <button>Add Player</button>
-      <h5>Choose a Player:</h5>
+      <h5>Choose Players:</h5>
 
       <div className="players">
         <form action="#">
