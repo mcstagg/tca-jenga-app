@@ -6,13 +6,13 @@ import GameSetup from './GameSetup';
 import Gameplay from './Gameplay'; 
 import PostGame from './PostGame'; 
 import {Route} from 'react-router-dom';
-import NavBar from './NavBar';
 import Header from './Header';
+import Nav from './Nav';
 
 function App() {
   return (
     <div className="container">
-      <NavBar className="nav"/>
+      <Nav />
       <Header />
       <Route exact path="/" component={HomeStats}/>
       <Route exact path="/gameSetup" component={GameSetup}/>

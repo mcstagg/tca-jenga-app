@@ -5,10 +5,18 @@ const SetupForm = () => {
   return (
     <div className="gameSetup">
       <h5>Add a Player:</h5>
-      <h6>Player Name:</h6>
-      <input type="textBox"></input>
-      <button>Add Player</button>
-      <h5>Choose Players:</h5>
+      <div className="row">
+      <form className="col s12">
+      <div className="row">
+      
+        <div className="row pl-1">
+        <input placeholder="Player Name" id="first_name" type="text" className="col s6 validate"></input>
+        <a className="col s3 offset-s1 waves-effect waves-light btn blue-buttons add-player">Add Player</a>
+        </div>
+      </div>
+
+      </form>
+    </div>
 
       <div className="players">
         <form action="#">
