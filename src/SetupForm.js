@@ -3,7 +3,7 @@ import React from 'react';
 const SetupForm = () => {
   
   return (
-    <div className="">
+    <div className="gameSetup">
       <h5>Add a Player:</h5>
       <h6>Player Name:</h6>
       <input type="textBox"></input>

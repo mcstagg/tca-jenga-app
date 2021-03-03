@@ -6,9 +6,9 @@ const HomeStats = () => {
 
   return (
     <>
-      <Leader h4text="Leaderboard" moveButton={<a href="/gameSetup" className={`waves-effect waves-light btn-large col s3 offset-s5 valign-wrapper`}>PLAY JENGA!<i className="large material-icons"></i></a>} />
+      <Leader h4text="Leaderboard" h4textcol="col s4" moveButton={<a href="/gameSetup" className={`waves-effect waves-light btn-large col s3 offset-s5 valign-wrapper purple lighten-1 buttons`}>PLAY JENGA!<i className="material-icons"></i></a>} />
       <Table />
-      <Leader h4text="Ready to Start?" atts="pl-3" moveButton={<a href="/gameSetup" className={`waves-effect waves-light btn-large col s3 offset-s2 valign-wrapper`}>PLAY JENGA!<i className="large material-icons"></i></a>}/>
+      <Leader h4text="Ready to Start?" h4textcol="col s7" atts="pl-2" moveButton={<a href="/gameSetup" className={`waves-effect waves-light btn-large col s3 offset-s2 valign-wrapper purple lighten-1 buttons`}>PLAY JENGA!<i className="material-icons"></i></a>}/>
     </>
   )    
 }   
