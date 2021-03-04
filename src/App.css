@@ -206,7 +206,7 @@ input {
 .player1 {
   background-color: #29b6f6;
   outline: thick solid black;
-  padding: 4em !important;
+  padding: 0em !important;
   margin: 0em !important;
 }
 
@@ -225,5 +225,10 @@ input {
   outline: thick solid black;
   margin: 0em !important;
   padding: 1em;
+}
+
+.clocks {
+  padding: .01em 1em .1em 1em !important;
+  margin-bottom: .5em !important;
 }
 

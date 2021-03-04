@@ -15,10 +15,10 @@ const Nav = (props) => {
            <Link to='/gameSetup' className="nav-links">Game Setup</Link>   
          </h6>
          <h6 className="col s3">
-           <Link to='/gameplay' className="nav-links">GamePlay</Link>   
+           <Link to='/gameplay' className="nav-links">Gameplay</Link>   
          </h6>
          <h6 className="col s3">
-           <Link to='/postGame' className="nav-links">PostGame</Link>   
+           <Link to='/postGame' className="nav-links">Post Game</Link>   
          </h6>
       </div>
       </div>
