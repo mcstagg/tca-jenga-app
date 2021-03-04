@@ -7,9 +7,9 @@ const Nav = (props) => {
   
   return (
       <div>
-      <div className="row nav blue darken-1">
-        <h6 className="col s3">
-           <Link to='/' className="nav-links">Home-Stats</Link>   
+      <div className="row nav blue darken-1 center">
+        <h6 className="col s3 center">
+           <Link to='/' className="nav-links center">Home-Stats</Link>   
          </h6>
          <h6 className="col s3">
            <Link to='/gameSetup' className="nav-links">Game Setup</Link>   
