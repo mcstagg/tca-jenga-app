@@ -72,6 +72,29 @@ const Results = (props) => {
         </td>
       </tr>
     </table>
+
+    <div className="row">
+      <h5 className="col s6">All-Time</h5>
+    </div>
+
+    <table className="">
+      <tr className="">
+        <td>
+          <h6>Mike: 17 Wins</h6>
+        </td>
+        <td>
+          <h6>10 Loses</h6>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h6>Travis: 10 Wins</h6>
+        </td>
+        <td>
+          <h6>17 Loses</h6>
+        </td>
+      </tr>
+    </table>
     </>
   )    
 }
