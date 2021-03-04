@@ -84,7 +84,11 @@ body {
 }
 
 .ml-0 {
-  margin-left: 0!important;
+  margin-left: 0 !important;
+}
+
+.mt-half {
+  margin-top: .5em !important;
 }
 
 .arrow {
@@ -214,10 +218,7 @@ input {
 }
 
 .player2 {
-  background-color: #29b6f6;
-  outline: thick solid black;
-  padding: 4em !important;
-  margin: 0em !important;
+  float: right !important;
 }
 
 .game-header{

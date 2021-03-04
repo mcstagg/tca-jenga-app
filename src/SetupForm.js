@@ -13,6 +13,7 @@ const SetupForm = () => {
         <input placeholder="Player Name" id="first_name" type="text" className="col s6 validate in"></input>
         <a className="col s3 offset-s1 waves-effect waves-light btn blue-buttons add-player">Add Player</a>
         </div>
+
       </div>
 
       </form>
