@@ -15,7 +15,7 @@ body {
 
 .nav {
   text-align: center !important;
-  padding: .5em;
+  padding: .1em;
   height: 4em;
   margin: 0;
   transition: background-color .2s ease-out;
@@ -247,17 +247,18 @@ input {
   box-sizing: initial !important;
 }
 
-@media screen and (max-width: 400px) {
+.tp {
+  padding: 0;
+}
 
-  .sml {
-  }
+@media screen and (max-width: 400px) {
 
   .jenga {
     width: 100% !important;
   }
 
   .tables {
-    width: 50% !important;
+    font-size: .75em;
   }
 
   .nav-links {
@@ -284,6 +285,15 @@ input {
     text-align: left;
     font-size: 2.5em;
   }
+
+  td {
+    padding: 1px !important;
+  }
+  
+  th {
+    padding: 1px !important;
+  }
+  
 
 
 }
