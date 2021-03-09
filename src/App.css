@@ -14,20 +14,22 @@ body {
 }
 
 .nav {
-  text-align: center;
+  text-align: center !important;
   padding: .5em;
   height: 4em;
   margin: 0;
   transition: background-color .2s ease-out;
+  color: white !important;
 }
 
 .nav:hover {
-  background-color: black;
+  background-color:  #29b6f6;
 }
 
 .nav-links {
   color: white !important;
   padding: 1em;
+  text-align: center !important;
 }
 
 .nav-links:hover {
@@ -240,3 +242,49 @@ input {
   padding: .01em;
 
 }
+
+.sml {
+  box-sizing: initial !important;
+}
+
+@media screen and (max-width: 400px) {
+
+  .sml {
+  }
+
+  .jenga {
+    width: 100% !important;
+  }
+
+  .tables {
+    width: 50% !important;
+  }
+
+  .nav-links {
+    font-size: 3.2vw;
+    text-align: center !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header {
+    margin-top: .2em !important;
+    margin-bottom: 0em !important;
+  }
+
+  .lb-header {
+    margin-top: .2em !important;
+  }
+
+  .lb-header-text {
+    font-size: 6.5vw;
+  }
+
+  .header-text {
+    text-align: left;
+    font-size: 2.5em;
+  }
+
+
+}
+

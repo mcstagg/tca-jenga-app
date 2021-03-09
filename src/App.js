@@ -11,7 +11,7 @@ import Nav from './Nav';
 
 function App() {
   return (
-    <div className="container">
+    <div className="sml jenga container">
       <Nav />
       <Header />
       <Route exact path="/" component={HomeStats}/>

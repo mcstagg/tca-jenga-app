@@ -1,9 +1,11 @@
 import React from 'react';
+import './materialize.css';
+import './App.css';
 
 const Table = (props) => {
   
   return (
-    <table>
+    <table className="tables">
       <thead>
         <tr>
           <th>Ranking</th>

@@ -11,6 +11,7 @@ const Results = (props) => {
       <h5 className="col s6">Mike's Stats</h5>
     </div>
     <table className="">
+    <tbody>
       <tr className="">
         <td>
           <h6>Total Player Time : 00:40:02</h6>
@@ -19,6 +20,7 @@ const Results = (props) => {
           <h6>Number of Moves: 32</h6>
         </td>
       </tr>
+      </tbody>
     </table>
 
     <div className="results p-2 card-panel purple lighten-1 center">
@@ -28,6 +30,7 @@ const Results = (props) => {
       <h5 className="col s6">Travis's Stats</h5>
     </div>
     <table className="">
+      <tbody>
       <tr className="">
         <td>
           <h6>Total Player Time : 00:22:12</h6>
@@ -36,6 +39,7 @@ const Results = (props) => {
           <h6>Number of Moves: 32</h6>
         </td>
       </tr>
+      </tbody>
     </table>
 
     <div className="results p-2 card-panel deep-orange darken-1 center">
@@ -47,6 +51,7 @@ const Results = (props) => {
     </div>
 
     <table className="">
+      <tbody>
       <tr className="">
         <td>
           <h6>Total Game Time: 01:22:14</h6>
@@ -71,29 +76,7 @@ const Results = (props) => {
           <h6>Attempt Placement: Row Col 2 Row 39</h6>
         </td>
       </tr>
-    </table>
-
-    <div className="row">
-      <h5 className="col s6">All-Time</h5>
-    </div>
-
-    <table className="">
-      <tr className="">
-        <td>
-          <h6>Mike: 17 Wins</h6>
-        </td>
-        <td>
-          <h6>10 Loses</h6>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <h6>Travis: 10 Wins</h6>
-        </td>
-        <td>
-          <h6>17 Loses</h6>
-        </td>
-      </tr>
+      </tbody>
     </table>
     </>
   )    

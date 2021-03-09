@@ -6,8 +6,8 @@ import './App.css';
 const Nav = (props) => {
   
   return (
-      <div>
-      <div className="row nav blue darken-1 center">
+      <div className="">
+      <div className=" row nav blue darken-1 center">
         <h6 className="col s3 center">
            <Link to='/' className="nav-links center">Home-Stats</Link>   
          </h6>
