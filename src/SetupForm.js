@@ -11,7 +11,7 @@ const SetupForm = () => {
       
         <div className="row pl-1">
         <input placeholder="Player Name" id="first_name" type="text" className="col s6 validate in"></input>
-        <a className="col s3 offset-s1 waves-effect waves-light btn blue-buttons add-player">Add Player</a>
+        <a className="col s4 m3 offset-s1 waves-effect waves-light btn blue-buttons add-player">Add Player</a>
         </div>
 
       </div>
@@ -19,7 +19,7 @@ const SetupForm = () => {
       </form>
     </div>
 
-      <div className="players">
+      <div className="">
         <form action="#">
           <div className="row">
             <div className="col s4">
