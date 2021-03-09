@@ -15,8 +15,8 @@ body {
 
 .nav {
   text-align: center !important;
-  padding: .1em;
-  height: 4em;
+  padding: .5em;
+  height: 3em;
   margin: 0;
   transition: background-color .2s ease-out;
   color: white !important;
@@ -28,8 +28,9 @@ body {
 
 .nav-links {
   color: white !important;
-  padding: 1em;
+  padding: .7em;
   text-align: center !important;
+  font-weight: 545;
 }
 
 .nav-links:hover {
@@ -131,15 +132,17 @@ body {
 
 .lb-header {
   margin: 0em;
-  padding-left: 2em;
   padding-top: 1em;
   padding-right: 1em;
   padding-bottom: 1em;
+  padding-left: 2em !important;
 }
 
 .lb-header-text {
   text-align: left;
   color: white;
+  padding-top: 0 !important;
+  margin-top: .4em !important;
 }
 
 .buttons {
@@ -251,6 +254,10 @@ input {
   padding: 0;
 }
 
+.tables {
+  font-weight: 525;
+}
+
 @media screen and (max-width: 400px) {
 
   .jenga {
@@ -275,10 +282,14 @@ input {
 
   .lb-header {
     margin-top: .2em !important;
+    padding-left: 1em !important;
   }
 
   .lb-header-text {
     font-size: 6.5vw;
+    padding-top: 0 !important;
+    margin-top: .5em !important;
+    margin-left: 0em !important;
   }
 
   .header-text {
