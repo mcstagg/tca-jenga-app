@@ -5,30 +5,30 @@ const Game = (props) => {
   return (  
     
     <>
-      <div className="row">
+      <div className="row mt-quarter">
         <div className="col s5 m5 p-0">
-          <div className="p-2 card-panel light-blue lighten-1 center blue-buttons">
-            <h2 className="white-text">Mike</h2>
+          <div className="marquis card-panel light-blue lighten-1 center blue-buttons">
+            <h2 className="white-text player">Mike</h2>
           </div>
         </div>
         <div className="col s2 p-0">
-          <div className="p-2 card-panel blue darken-1">
-            <h2 className="white-text">VS</h2>
+          <div className="marquis card-panel blue darken-1 vs">
+            <h2 className="white-text player vs">VS</h2>
           </div>
         </div>
         <div className="col s5 p-0">
-          <div className="p-2 card-panel light-blue lighten-1 center blue-buttons">
-            <h2 className="white-text">Travis</h2>
+          <div className="marquis card-panel light-blue lighten-1 center blue-buttons">
+            <h2 className="white-text player">Travis</h2>
           </div>
         </div>
       </div>
 
       <div>
         <form>
-          <h1 className="center mt-half" >Mike's Turn</h1>
+          <h1 className="center mt-quarter">Mike's Turn</h1>
           <div className="row center">
-            <h5 className="col s4 offset-s1">Removed From:</h5>
-            <h5 className="col s4 offset-s2">Replaced On:</h5>
+            <h5 className="col s4 offset-s1 mt-0">Removed From:</h5>
+            <h5 className="col s4 offset-s2 mt-0">Replaced On:</h5>
           </div>
 
           <div className="row center">
@@ -52,11 +52,11 @@ const Game = (props) => {
           <div className="row">
             <div className="col s6 center">
               <h5>Height of Tower:</h5>
-              <h1>27</h1>
+              <h1 className="mb-quarter mt-half">27</h1>
             </div>
             <div className="col s6 center">
               <h5>Blocks Replaced:</h5>
-              <h1>29</h1>
+              <h1 className="mb-quarter mt-half">29</h1>
             </div>
           </div>
         </form>
@@ -66,22 +66,22 @@ const Game = (props) => {
 
         <div className="col s12 m4 p-0 center">
           <div className="clocks card-panel light-blue lighten-1 center">
-            <h5>Game Clock</h5>
-            <h3 className="white-text center">00:41:44</h3>
+            <h5 className="clock">Game Clock</h5>
+            <h3 className="white-text center time">00:41:44</h3>
           </div>
         </div>
 
         <div className="col s12 m4 p-0 center">
           <div className="clocks card-panel blue darken-1 center">
-            <h5>Move Timer</h5>
-            <h3 className="white-text">00:04:20</h3>
+            <h5 className="clock">Move Timer</h5>
+            <h3 className="white-text time">00:04:20</h3>
           </div>
         </div>
 
         <div className="col s12 m4 p-0 center">
           <div className="clocks card-panel light-blue lighten-1 center">
-            <h5>Total Time</h5>
-            <h3 className="white-text">00:18:88</h3>
+            <h5 className="clock">Total Time</h5>
+            <h3 className="white-text time">00:18:88</h3>
           </div>
         </div>
         

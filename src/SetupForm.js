@@ -59,7 +59,7 @@ const SetupForm = () => {
             </p>
           </div>
 
-          <div className="col s4 m4 pl-2">
+          <div className="col s4 m4 pl-2 play-col">
             <p>
             <label>
             <input type="checkbox" />

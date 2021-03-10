@@ -85,6 +85,14 @@ body {
   margin-left: 0 !important;
 }
 
+.mt-0 {
+  margin-top: 0em !important;
+}
+
+.mt-quarter {
+  margin-top: .25em !important;
+}
+
 .mt-half {
   margin-top: .5em !important;
 }
@@ -95,6 +103,18 @@ body {
 
 .mt-2 {
   margin-top: 2em !important;
+}
+
+.mb-0 {
+  margin-bottom: 0em !important;
+}
+
+.mb-quarter {
+  margin-bottom: .25em !important;
+}
+
+.mb-half {
+  margin-bottom: .5em !important;
 }
 
 .arrow {
@@ -216,13 +236,6 @@ input {
   margin: 0em !important;
 }
 
-.vs {
-  background-color: #ffab91;
-  outline: thick solid black;
-  padding: 6em !important;
-  margin: 0em !important;
-}
-
 .player2 {
   float: right !important;
 }
@@ -297,6 +310,7 @@ span {
 
   .lb-header {
     margin-top: .2em !important;
+    margin-bottom: 0em !important;
     padding-left: 1em !important;
   }
 
@@ -363,6 +377,38 @@ span {
 
   .rematch {
     padding: 0em 1em 0em .5em !important;
+  }
+
+  .marquis {
+    padding: .25em 0em .25em 0em !important;
+    margin: 0em !important;
+  }
+
+  .player {
+    font-size: 2.8em !important;
+  }
+
+  .vs {
+    padding-left: 1px !important;
+  }
+
+  .clocks {
+    padding: 1px !important;
+    margin: .2em !important;
+  }
+
+  .clock {
+    padding: .2em !important;
+    margin: 0em !important;
+  }
+
+  .time {
+    padding: .1em !important;
+    margin: 0em !important;
+  }
+
+  .play-col {
+    padding-left: 1em !important;
   }
 }
 
