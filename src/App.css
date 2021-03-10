@@ -286,6 +286,22 @@ span {
   margin: 1em !important;
 }
 
+.marquis-mt {
+  margin-top: .1px !important;
+}
+
+.ready {
+  padding-left: 18px !important;
+}
+
+.rematch {
+  padding-left: 50px !important;
+}
+
+.prepare {
+  padding-left: 0px !important;
+}
+
 @media screen and (max-width: 400px) {
 
   .jenga {
@@ -409,6 +425,10 @@ span {
 
   .play-col {
     padding-left: 1em !important;
+  }
+
+  .marquis-mt {
+    margin-top: 3px !important;
   }
 }
 
