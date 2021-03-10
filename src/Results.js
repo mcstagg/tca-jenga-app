@@ -5,7 +5,7 @@ const Results = (props) => {
   return (
     <>
     <div className="results p-2 mt-1 card-panel light-blue lighten-1 center">
-      <h2 className="white-text">Winner!  Mike</h2>
+      <h2 className="white-text results">Winner!  Mike</h2>
     </div>
     <div className="row">
       <h5 className="col s6">Mike's Stats</h5>
@@ -24,7 +24,7 @@ const Results = (props) => {
     </table>
 
     <div className="results p-2 card-panel purple lighten-1 center">
-      <h2 className="white-text">Loser!  Travis</h2>
+      <h2 className="white-text results">Loser!  Travis</h2>
     </div>
     <div className="row">
       <h5 className="col s6">Travis's Stats</h5>
@@ -43,7 +43,7 @@ const Results = (props) => {
     </table>
 
     <div className="results p-2 card-panel deep-orange darken-1 center">
-      <h2 className="white-text">JENGA!</h2>
+      <h2 className="results white-text">JENGA!</h2>
     </div>
 
     <div className="row">

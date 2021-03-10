@@ -15,9 +15,9 @@ body {
 
 .nav {
   text-align: center !important;
-  padding: 0em;
+  padding: .8em;
   height: 3em;
-  margin: 0em;
+  margin: 0em !important;
   transition: background-color .2s ease-out;
   color: white !important;
 }
@@ -28,7 +28,7 @@ body {
 
 .nav-links {
   color: white !important;
-  padding: .1em !important;
+  padding: 1.3em 2em 1.3em 2em !important;
   margin: 0em !important;
   text-align: center !important;
   font-weight: 545;
@@ -104,8 +104,8 @@ body {
 }
 
 .header {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: .5em;
+  margin-bottom: .5em;
   padding: 0em;
   height: 15em;
 }
@@ -176,11 +176,11 @@ body {
 
 
 .gameSetup {
-  border-width: 5px;
-  margin: 1em 0em 1em 0em;
-  padding: 1em 2em 1em 2em;
+  margin: 1em 1em 1em 1em;
+  padding: 0em 0em 0em 0em;
   text-align: left;
   color: black !important;
+  font-size: 1em;
 }
 
 input {
@@ -258,6 +258,16 @@ input {
   font-weight: 525;
 }
 
+.results {
+  padding: 0em !important;
+  margin: .1em !important;
+}
+
+.play-col {
+  padding-right: 10px !important;
+  color: red !important;
+}
+
 @media screen and (max-width: 400px) {
 
   .jenga {
@@ -297,17 +307,22 @@ input {
     font-size: 2.5em;
   }
 
-  td {
-    padding: 1px !important;
-  }
-  
   th {
-    padding: 1px !important;
+    padding: 4px !important;
+  }
+
+  td {
+    padding: 4px !important;
   }
   
   .gameSetup {
-    padding: .5em !important;
+    padding: 0em 1em 0em 1em !important;
     margin: 0;
+  }
+
+  .results {
+    padding: 0em !important;
+    margin: .1em !important;
   }
 
 }
