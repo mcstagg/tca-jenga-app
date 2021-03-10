@@ -5,7 +5,7 @@ import './App.css';
 const Table = (props) => {
   
   return (
-    <table className="tables">
+    <table className="tables leaderboard">
       <thead>
         <tr>
           <th>Ranking</th>

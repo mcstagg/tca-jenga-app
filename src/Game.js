@@ -5,7 +5,7 @@ const Game = (props) => {
   return (  
     
     <>
-      <div className="row mt-half">
+      <div className="row">
         <div className="col s5 m5 p-0">
           <div className="p-2 card-panel light-blue lighten-1 center blue-buttons">
             <h2 className="white-text">Mike</h2>

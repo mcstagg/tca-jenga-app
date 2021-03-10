@@ -3,20 +3,20 @@ import React from 'react';
 const Results = (props) => {
   
   return (
-    <>
-    <div className="results p-2 mt-1 card-panel light-blue lighten-1 center">
-      <h2 className="white-text results">Winner!  Mike</h2>
+    <div className="mt-half">
+    <div className="results card-panel light-blue lighten-1 center">
+      <h2 className="white-text results">Winner! Mike</h2>
     </div>
     <div className="row">
       <h5 className="col s6">Mike's Stats</h5>
     </div>
     <table className="">
     <tbody>
-      <tr className="">
-        <td>
+      <tr>
+        <td className="post-stats">
           <h6>Total Player Time : 00:40:02</h6>
         </td>
-        <td>
+        <td className="post-stats">
           <h6>Number of Moves: 32</h6>
         </td>
       </tr>
@@ -32,10 +32,10 @@ const Results = (props) => {
     <table className="">
       <tbody>
       <tr className="">
-        <td>
+        <td className="post-stats">
           <h6>Total Player Time : 00:22:12</h6>
         </td>
-        <td>
+        <td className="post-stats">
           <h6>Number of Moves: 32</h6>
         </td>
       </tr>
@@ -53,32 +53,32 @@ const Results = (props) => {
     <table className="">
       <tbody>
       <tr className="">
-        <td>
+        <td className="post-stats">
           <h6>Total Game Time: 01:22:14</h6>
         </td>
-        <td>
+        <td className="post-stats">
           <h6>Total Moves: 64</h6>
         </td>
       </tr>
       <tr>
-        <td>
+        <td className="post-stats">
           <h6>Max Tower Height: 39</h6>
         </td>
-        <td>
+        <td className="post-stats">
           <h6>JENGA Caused By: Travis</h6>
         </td>
       </tr>
       <tr>
-        <td>
+        <td className="post-stats">
           <h6>Block Was Pulled From: Col 3 Row 9</h6>
         </td>
-        <td>
+        <td className="post-stats">
           <h6>Attempt Placement: Row Col 2 Row 39</h6>
         </td>
       </tr>
       </tbody>
     </table>
-    </>
+    </div>
   )    
 }
 

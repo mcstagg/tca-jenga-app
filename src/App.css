@@ -1,12 +1,10 @@
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 body {
@@ -15,7 +13,7 @@ body {
 
 .nav {
   text-align: center !important;
-  padding: .8em;
+  padding: .8em 0em .8em 0em;
   height: 3em;
   margin: 0em !important;
   transition: background-color .2s ease-out;
@@ -32,15 +30,11 @@ body {
   margin: 0em !important;
   text-align: center !important;
   font-weight: 545;
+  font-size: 1em !important;
 }
 
 .nav-links:hover {
   background-color: #29b6f6;
-}
-
-
-.align-center {
-  text-align: center !important;
 }
 
 .align-left {
@@ -97,6 +91,10 @@ body {
 
 .mt-1 {
   margin-top: 1em !important;
+}
+
+.mt-2 {
+  margin-top: 2em !important;
 }
 
 .arrow {
@@ -177,10 +175,9 @@ body {
 
 .gameSetup {
   margin: 1em 1em 1em 1em;
-  padding: 0em 0em 0em 0em;
+  padding: 0em 0em 0em 1em;
   text-align: left;
   color: black !important;
-  font-size: 1em;
 }
 
 input {
@@ -263,9 +260,17 @@ input {
   margin: .1em !important;
 }
 
-.play-col {
-  padding-right: 10px !important;
-  color: red !important;
+input {
+  font-size: 1.75em !important;
+}
+
+span {
+  font-size: 2em !important;
+}
+
+.post-stats {
+  padding: 0em .5em 0em .8em !important;
+  margin: 1em !important;
 }
 
 @media screen and (max-width: 400px) {
@@ -320,10 +325,44 @@ input {
     margin: 0;
   }
 
+  .leaderboard {
+    margin-left: 3px !important;
+  }
+
   .results {
     padding: 0em !important;
     margin: .1em !important;
   }
 
+  span {
+    font-size: 1em !important;
+  }
+
+  .nav {
+    font-size: 1em;
+    padding-top: 0em !important;
+    padding-bottom: 1.25em !important;
+  }
+
+  .nav-links {
+    font-size: .5em;
+    padding-left: 0 !important;
+    padding-right: 0em !important;
+    padding-top: 0em !important;
+    padding-bottom: 0em !important;
+    margin-top: 0em !important;
+  }
+
+  .check {
+    padding: 0em !important;
+  }
+
+  .ready {
+    padding: 0em 1em 0em 1em !important;
+  }
+
+  .rematch {
+    padding: 0em 1em 0em .5em !important;
+  }
 }
 

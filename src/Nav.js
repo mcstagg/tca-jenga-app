@@ -9,13 +9,13 @@ const Nav = (props) => {
       <div className="">
       <div className=" row nav blue darken-1">
         <h6 className="col s3 center">
-           <Link to='/' className="nav-links">Home-Stats</Link>   
+           <Link to='/' className="nav-links">Home Stats</Link>   
          </h6>
          <h6 className="col s3">
            <Link to='/gameSetup' className="nav-links">Game Setup</Link>   
          </h6>
          <h6 className="col s3">
-           <Link to='/gameplay' className="nav-links">Gameplay</Link>   
+           <Link to='/gameplay' className="nav-links">Game Play</Link>   
          </h6>
          <h6 className="col s3">
            <Link to='/postGame' className="nav-links">Post Game</Link>   

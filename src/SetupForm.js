@@ -1,31 +1,36 @@
 import React from 'react';
+import './materialize.css';
+import './App.css';
 
 const SetupForm = () => {
   
   return (
-    <div className="row gameSetup">
-      <h5 className="col s3 offset-s2">Add a Player:</h5>
+    <div className="gameSetup">
+
       <div className="row">
-      <form className="col s12">
-      
-        <div className="row pl-1">
-        <input placeholder="Player Name" id="first_name" type="text" className="col s4 offset-s2 validate in"></input>
-        <a className="col s4 m3 offset-s1 offset-m1 waves-effect waves-light btn blue-buttons add-player">Add Player</a>
-        </div>
+        <h4 className="left-align">Add a Player:</h4>
+      </div>
 
-      
+      <div className="row">
+        <form className="col s12">
+          <div className="row pl-1">
+          <input placeholder="Player Name" id="first_name" type="text" className="col m4 s6 validate"></input>
+          <a className="col s5 m3 offset-s1 offset-m1   waves-effect waves-light btn blue-buttons   add-player">Add Player</a>
+          </div>
+        </form>
+      </div>
 
-      </form>
-    </div>
+      <div className="row">
+        <h4 className="left-align">Choose Players:</h4>
+      </div>
 
-      <div className="">
-        <form action="#">
-          <div className="row">
-            <div className="col s4 play-col">
+      <form action="#">
+        <div className="row">
+          <div className="col s4 m4 check">
             <p>
             <label>
-            <input type="checkbox" />
-            <span>Mike S</span>
+            <input type="checkbox" className="setup" />
+            <span className="">Mike S</span>
             </label>
             </p>
             <p>
@@ -52,8 +57,9 @@ const SetupForm = () => {
             <span>Jeremey</span>
             </label>
             </p>
-            </div>
-            <div className="col s4">
+          </div>
+
+          <div className="col s4 m4 pl-2">
             <p>
             <label>
             <input type="checkbox" />
@@ -75,7 +81,7 @@ const SetupForm = () => {
             <p>
             <label>
             <input type="checkbox" />
-            <span>Danny D</span>
+            <span>Danny</span>
             </label>
             </p>
             <p>
@@ -84,12 +90,13 @@ const SetupForm = () => {
             <span>Terje</span>
             </label>
             </p>
-            </div>
-            <div className="col s4">
+          </div>
+
+          <div className="col s4 pl-2">
             <p>
             <label>
             <input type="checkbox" />
-            <span>Jussi O</span>
+            <span>Jussi</span>
             </label>
             </p>
             <p>
@@ -107,19 +114,19 @@ const SetupForm = () => {
             <p>
             <label>
             <input type="checkbox" />
-            <span>Ben Ferguson</span>
+            <span>Ben</span>
             </label>
             </p>
             <p>
             <label>
             <input type="checkbox" />
-            <span>Jamie A</span>
+            <span>Jamie</span>
             </label>
             </p>
-            </div>
           </div>
-        </form>
-      </div>
+
+        </div>
+      </form>
     </div>
   )    
 }
