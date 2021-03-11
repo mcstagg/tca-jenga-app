@@ -26,8 +26,8 @@ const SetupForm = () => {
 
       <form action="#">
         <div className="row">
-          <div className="col s4 m4 check">
-            <p>
+          <div className="col s4 m4">
+            <p className="">
             <label>
             <input type="checkbox" className="setup" />
             <span className="">Mike S</span>

@@ -150,11 +150,10 @@ body {
 }
 
 .lb-header {
-  margin: 0em;
   padding-top: 1em;
   padding-right: 1em;
   padding-bottom: 1em;
-  padding-left: 2em !important;
+  padding-left: 0em;
 }
 
 .lb-header-text {
@@ -291,15 +290,15 @@ span {
 }
 
 .ready {
-  padding-left: 18px !important;
+  text-align: center !important;
 }
 
 .rematch {
-  padding-left: 35px !important;
+  text-align: center !important;
 }
 
 .prepare {
-  padding-left: 0px !important;
+  text-align: center !important;
 }
 
 .vs {
