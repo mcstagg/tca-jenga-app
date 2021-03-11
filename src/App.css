@@ -295,11 +295,15 @@ span {
 }
 
 .rematch {
-  padding-left: 50px !important;
+  padding-left: 35px !important;
 }
 
 .prepare {
   padding-left: 0px !important;
+}
+
+.vs {
+  padding-left: 16px !important;
 }
 
 @media screen and (max-width: 400px) {

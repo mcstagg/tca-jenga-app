@@ -50,7 +50,7 @@ const Results = (props) => {
       <h5 className="col s6">Game Stats</h5>
     </div>
 
-    <table className="">
+    <table className="mb-quarter">
       <tbody>
       <tr className="">
         <td className="post-stats">
