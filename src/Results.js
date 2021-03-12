@@ -8,16 +8,16 @@ const Results = (props) => {
       <h2 className="white-text results">Winner! Mike</h2>
     </div>
     <div className="row">
-      <h5 className="col s6">Mike's Stats</h5>
+      <h4 className="col s6">Mike's Stats</h4>
     </div>
     <table className="">
     <tbody>
-      <tr>
+      <tr className="post-text">
         <td className="post-stats">
-          <h6>Total Player Time : 00:40:02</h6>
+          Total Player Time : 00:40:02
         </td>
         <td className="post-stats">
-          <h6>Number of Moves: 32</h6>
+          Number of Moves: 32
         </td>
       </tr>
       </tbody>
@@ -27,16 +27,16 @@ const Results = (props) => {
       <h2 className="white-text results">Loser!  Travis</h2>
     </div>
     <div className="row">
-      <h5 className="col s6">Travis's Stats</h5>
+      <h4 className="col s6">Travis's Stats</h4>
     </div>
     <table className="">
       <tbody>
-      <tr className="">
+      <tr className="post-text">
         <td className="post-stats">
-          <h6>Total Player Time : 00:22:12</h6>
+          Total Player Time : 00:22:12
         </td>
         <td className="post-stats">
-          <h6>Number of Moves: 32</h6>
+          Number of Moves: 32
         </td>
       </tr>
       </tbody>
@@ -47,33 +47,33 @@ const Results = (props) => {
     </div>
 
     <div className="row">
-      <h5 className="col s6">Game Stats</h5>
+      <h4 className="col s6">Game Stats</h4>
     </div>
 
     <table className="mb-quarter">
       <tbody>
-      <tr className="">
+      <tr className="post-text">
         <td className="post-stats">
-          <h6>Total Game Time: 01:22:14</h6>
+          Total Game Time: 01:22:14
         </td>
         <td className="post-stats">
-          <h6>Total Moves: 64</h6>
-        </td>
-      </tr>
-      <tr>
-        <td className="post-stats">
-          <h6>Max Tower Height: 39</h6>
-        </td>
-        <td className="post-stats">
-          <h6>JENGA Caused By: Travis</h6>
+          Total Moves: 64
         </td>
       </tr>
-      <tr>
+      <tr className="post-text">
         <td className="post-stats">
-          <h6>Block Was Pulled From: Col 3 Row 9</h6>
+          Max Tower Height: 39
         </td>
         <td className="post-stats">
-          <h6>Attempt Placement: Row Col 2 Row 39</h6>
+          JENGA Caused By: Travis
+        </td>
+      </tr>
+      <tr className="post-text">
+        <td className="post-stats">
+          Block Was Pulled From: Col 3 Row 9
+        </td>
+        <td className="post-stats">
+          Attempt Placement: Row Col 2 Row 39
         </td>
       </tr>
       </tbody>
