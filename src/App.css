@@ -130,7 +130,6 @@ body {
 }
 
 .tables {
-  font-weight: 525;
   table-layout: fixed;
 }
 
@@ -176,7 +175,7 @@ input {
 /* Gameplay ---------------------------------------*/
 
 .marquis-mt {
-  margin-top: .1px !important;
+  margin-top: 0px !important;
 }
 
 .gameplay {
@@ -195,7 +194,7 @@ input {
 }
 
 .vs {
-  padding-left: 16px !important;
+  text-align: center !important;
 }
 
 .player2 {
@@ -251,7 +250,7 @@ span {
   }
 
   .tables {
-    font-size: .75em;
+    font-size: .7em;
   }
 
   .nav-links {
@@ -347,8 +346,9 @@ span {
   }
 
   .vs {
-    padding-left: 1px !important;
+    padding: 0em !important;
   }
+
 
   .clocks {
     padding: 1px !important;
@@ -382,6 +382,7 @@ span {
 
   .lb-pad {
     text-align: center !important;
+    padding-left: 0em !important;
   }
 
 }
@@ -394,9 +395,11 @@ span {
 
 }
 
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 675px) {
 
-  
+  .tables {
+    font-size: .7em;
+  }
 
 }
 
@@ -444,6 +447,10 @@ span {
 
 .ml-0 {
   margin-left: 0 !important;
+}
+
+.ml-1 {
+  margin-left: 1em !important;
 }
 
 .mt-0 {

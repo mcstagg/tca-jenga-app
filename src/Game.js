@@ -5,7 +5,7 @@ const Game = (props) => {
   return (  
     
     <>
-      <div className="row mt-quarter marquis-mt">
+      <div className="row marquis-mt">
         <div className="col s5 m5 p-0">
           <div className="marquis card-panel light-blue lighten-1 center blue-buttons">
             <h2 className="white-text player">Mike</h2>
@@ -13,7 +13,7 @@ const Game = (props) => {
         </div>
         <div className="col s2 p-0">
           <div className="marquis card-panel blue darken-1 vs">
-            <h2 className="white-text player vs">VS</h2>
+            <h2 className="white-text vs">VS</h2>
           </div>
         </div>
         <div className="col s5 p-0">
