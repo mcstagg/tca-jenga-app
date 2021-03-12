@@ -1,3 +1,5 @@
+/* Structural --------------------------------------------*/
+
 .App-header {
   min-height: 100vh;
   display: flex;
@@ -10,6 +12,8 @@
 body {
   font-family: 'Oi', cursive;
 }
+
+/* Navigation --------------------------------------------*/
 
 .nav {
   text-align: center !important;
@@ -37,89 +41,7 @@ body {
   background-color: #29b6f6;
 }
 
-.align-left {
-  text-align: left !important;
-}
-
-.p-0 {
-  padding: 0 !important;
-}
-
-.p-1 {
-  padding: 0 !important;
-}
-
-.pl-1 {
-  padding-left: 1em !important;
-}
-
-.pl-2 {
-  padding-left: 2em !important;
-}
-
-.pl-3 {
-  padding-left: 3em !important;
-}
-
-.pl-4 {
-  padding-left: 4em !important;
-}
-
-.pr-0 {
-  padding-right: 0em !important;
-}
-
-.pr-1 {
-  padding-right: 1em !important;
-}
-
-.m-0 {
-  margin: 0 !important;
-}
-
-.m-1 {
-  margin: 0 !important;
-}
-
-.ml-0 {
-  margin-left: 0 !important;
-}
-
-.mt-0 {
-  margin-top: 0em !important;
-}
-
-.mt-quarter {
-  margin-top: .25em !important;
-}
-
-.mt-half {
-  margin-top: .5em !important;
-}
-
-.mt-1 {
-  margin-top: 1em !important;
-}
-
-.mt-2 {
-  margin-top: 2em !important;
-}
-
-.mb-0 {
-  margin-bottom: 0em !important;
-}
-
-.mb-quarter {
-  margin-bottom: .25em !important;
-}
-
-.mb-half {
-  margin-bottom: .5em !important;
-}
-
-.arrow {
-  font-size: 2.5em !important;
-}
+/* Banner ----------------------------------------------*/
 
 .header {
   margin-top: .5em;
@@ -143,11 +65,7 @@ body {
   margin: 0em;
 }
 
-@media screen and (min-width: 1000px) {
-  .header-text {
-    font-size: 5em;
-  }
-}
+/* Header -----------------------------------------------*/
 
 .lb-header {
   padding-top: 1em;
@@ -162,14 +80,7 @@ body {
   margin-top: .3em !important;
 }
 
-.stat-text {
-  font-size: 1em;
-}
-
-.post-text {
-  font-size: 1.4em !important;
-  padding: 10px !important;
-}
+/* Buttons -----------------------------------------------*/
 
 .buttons {
   border-radius: 5px;
@@ -199,6 +110,36 @@ body {
   background-color: #ab47bc !important;
 }
 
+/* Stats ----------------------------------------------*/
+
+.ready {
+  text-align: center !important;
+}
+
+.stat-text {
+  font-size: 1em;
+}
+
+.post-text {
+  font-size: 1.4em !important;
+  padding: 10px !important;
+}
+
+.tp {
+  padding: 0;
+}
+
+.tables {
+  font-weight: 525;
+  table-layout: fixed;
+}
+
+.post-stats {
+  padding: 0em .5em 0em .8em !important;
+  margin: 1em !important;
+}
+
+/* Game Setup ------------------------------------*/
 
 .gameSetup {
   margin: 1em 1em 1em 1em;
@@ -228,6 +169,16 @@ input {
   color: black !important;
 }
 
+.prepare {
+  text-align: center !important;
+}
+
+/* Gameplay ---------------------------------------*/
+
+.marquis-mt {
+  margin-top: .1px !important;
+}
+
 .gameplay {
   border-style: solid;
   border-width: 5px;
@@ -241,6 +192,10 @@ input {
   outline: thick solid black;
   padding: 0em !important;
   margin: 0em !important;
+}
+
+.vs {
+  padding-left: 16px !important;
 }
 
 .player2 {
@@ -258,22 +213,7 @@ input {
   margin-bottom: .5em !important;
 }
 
-.results {
-  padding: .01em;
-
-}
-
-.sml {
-  box-sizing: initial !important;
-}
-
-.tp {
-  padding: 0;
-}
-
-.tables {
-  font-weight: 525;
-}
+/* Post Game --------------------------------------*/
 
 .results {
   padding: 0em !important;
@@ -288,29 +228,20 @@ span {
   font-size: 2em !important;
 }
 
-.post-stats {
-  padding: 0em .5em 0em .8em !important;
-  margin: 1em !important;
-}
-
-.marquis-mt {
-  margin-top: .1px !important;
-}
-
-.ready {
-  text-align: center !important;
-}
-
 .rematch {
   text-align: center !important;
 }
 
-.prepare {
-  text-align: center !important;
+.sml {
+  box-sizing: initial !important;
 }
 
-.vs {
-  padding-left: 16px !important;
+/* Responsivity/Media Queries ------------------------------*/
+
+@media screen and (min-width: 1000px) {
+  .header-text {
+    font-size: 5em;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -463,5 +394,87 @@ span {
 
 }
 
+@media screen and (max-width: 525px) {
 
+  
+
+}
+
+/* Quick Formatting -------------------------------------------*/
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.p-1 {
+  padding: 0 !important;
+}
+
+.pl-1 {
+  padding-left: 1em !important;
+}
+
+.pl-2 {
+  padding-left: 2em !important;
+}
+
+.pl-3 {
+  padding-left: 3em !important;
+}
+
+.pl-4 {
+  padding-left: 4em !important;
+}
+
+.pr-0 {
+  padding-right: 0em !important;
+}
+
+.pr-1 {
+  padding-right: 1em !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.m-1 {
+  margin: 0 !important;
+}
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.mt-0 {
+  margin-top: 0em !important;
+}
+
+.mt-quarter {
+  margin-top: .25em !important;
+}
+
+.mt-half {
+  margin-top: .5em !important;
+}
+
+.mt-1 {
+  margin-top: 1em !important;
+}
+
+.mt-2 {
+  margin-top: 2em !important;
+}
+
+.mb-0 {
+  margin-bottom: 0em !important;
+}
+
+.mb-quarter {
+  margin-bottom: .25em !important;
+}
+
+.mb-half {
+  margin-bottom: .5em !important;
+}
 
