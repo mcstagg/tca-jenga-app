@@ -186,19 +186,16 @@ input {
   text-align: center !important;
 }
 
-.player1 {
-  background-color: #29b6f6;
-  outline: thick solid black;
+.names {
   padding: 0em !important;
-  margin: 0em !important;
+}
+
+.names2 {
+  padding: 1em 0em 1em 0em !important;
 }
 
 .vs {
   text-align: center !important;
-}
-
-.player2 {
-  float: right !important;
 }
 
 .game-header{
@@ -240,6 +237,14 @@ span {
 @media screen and (min-width: 1000px) {
   .header-text {
     font-size: 5em;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .lb-header {
+    margin-top: .2em !important;
+    margin-bottom: 0em !important;
+    padding-left: 1em !important;
   }
 }
 
@@ -346,9 +351,8 @@ span {
   }
 
   .vs {
-    padding: 0em !important;
+    font-size: 1.6em !important;
   }
-
 
   .clocks {
     padding: 1px !important;
@@ -399,6 +403,45 @@ span {
 
   .tables {
     font-size: .7em;
+  }
+
+}
+
+@media screen and (max-width: 525px) {
+
+  .names3 {
+    font-size: 2.5em !important;
+  }
+
+}
+
+@media screen and (max-width: 300px) {
+
+  .names3 {
+    font-size: 2em !important;
+  }
+
+}
+
+@media only screen and (max-width: 750px) {
+  .htext-hide {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .row .col.sm3 {
+    width: 25% !important;
+    margin-left: auto !important;
+    left: auto !important;
+    right: auto !important;
+  }
+  
+  .row .col.sm4 {
+    width: 33.3333333333% !important;
+    margin-left: auto !important;
+    left: auto !important;
+    right: auto !important;
   }
 
 }

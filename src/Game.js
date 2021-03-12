@@ -6,19 +6,19 @@ const Game = (props) => {
     
     <>
       <div className="row marquis-mt">
-        <div className="col s5 m5 p-0">
-          <div className="marquis card-panel light-blue lighten-1 center blue-buttons">
-            <h2 className="white-text player">Mike</h2>
+        <div className="col s5 m5 names">
+          <div className="card-panel light-blue lighten-1 blue-buttons center names2">
+            <h2 className="white-text names3">Mike</h2>
           </div>
         </div>
-        <div className="col s2 p-0">
-          <div className="marquis card-panel blue darken-1 vs">
-            <h2 className="white-text vs">VS</h2>
+        <div className="col s2 m2 names">
+          <div className="card-panel blue darken-1 center names2">
+            <h2 className="white-text names3">VS</h2>
           </div>
         </div>
-        <div className="col s5 p-0">
-          <div className="marquis card-panel light-blue lighten-1 center blue-buttons">
-            <h2 className="white-text player">Travis</h2>
+        <div className="col s5 m5 names">
+          <div className="card-panel light-blue lighten-1 blue-buttons center names2">
+            <h2 className="white-text names3">Travis</h2>
           </div>
         </div>
       </div>
