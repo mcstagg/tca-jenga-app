@@ -8,7 +8,7 @@ const Results = (props) => {
       <h2 className="white-text results">Winner! Mike</h2>
     </div>
     <div className="row">
-      <h4 className="col s6">Mike's Stats</h4>
+      <h4 className="col s8">Mike's Stats</h4>
     </div>
     <table className="">
     <tbody>
@@ -27,7 +27,7 @@ const Results = (props) => {
       <h2 className="white-text results">Loser!  Travis</h2>
     </div>
     <div className="row">
-      <h4 className="col s6">Travis's Stats</h4>
+      <h4 className="col s8">Travis's Stats</h4>
     </div>
     <table className="">
       <tbody>
@@ -47,7 +47,7 @@ const Results = (props) => {
     </div>
 
     <div className="row">
-      <h4 className="col s6">Game Stats</h4>
+      <h4 className="col s8">Game Stats</h4>
     </div>
 
     <table className="mb-quarter">

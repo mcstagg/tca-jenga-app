@@ -125,10 +125,6 @@ body {
   padding: 10px !important;
 }
 
-.tp {
-  padding: 0;
-}
-
 .tables {
   table-layout: fixed;
 }
@@ -136,6 +132,14 @@ body {
 .post-stats {
   padding: 0em .5em 0em .8em !important;
   margin: 1em !important;
+}
+
+th {
+  padding: 4px !important;
+}
+
+td {
+  padding: 4px !important;
 }
 
 /* Game Setup ------------------------------------*/
@@ -248,6 +252,18 @@ span {
   }
 }
 
+@media screen and (max-width: 500px) {
+
+  .lb-header-text {
+    font-size: 6.5vw;
+    padding-top: 0 !important;
+    margin-top: .5em !important;
+    margin-left: 0em !important;
+    min-height: 10px !important;
+  }
+
+}
+
 @media screen and (max-width: 400px) {
 
   .jenga {
@@ -274,13 +290,6 @@ span {
     margin-top: .2em !important;
     margin-bottom: 0em !important;
     padding-left: 1em !important;
-  }
-
-  .lb-header-text {
-    font-size: 6.5vw;
-    padding-top: 0 !important;
-    margin-top: .5em !important;
-    margin-left: 0em !important;
   }
 
   .header-text {
@@ -399,10 +408,58 @@ span {
 
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 650px) {
+
+  .tables {
+    font-size: .9em;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .tables {
+    font-size: .8em;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
 
   .tables {
     font-size: .7em;
+  }
+
+}
+
+@media screen and (max-width: 350px) {
+
+  .tables {
+    font-size: .6em;
+  }
+
+}
+
+@media screen and (max-width: 300px) {
+
+  .tables {
+    font-size: .5em;
+  }
+
+}
+
+@media screen and (max-width: 250px) {
+
+  .tables {
+    font-size: .3em;
+  }
+
+}
+
+@media screen and (max-width: 180px) {
+
+  .tables {
+    font-size: .2em;
   }
 
 }
