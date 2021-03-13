@@ -1,13 +1,14 @@
 import React from 'react';
-import jenga from './tower.PNG';
+import './App.css';
 
-const Header = () => {
+const Header = (props) => {
   
   return (
-    <div className="row deep-orange darken-1 header valign-wrapper">
-      <img src={jenga} alt="jenga" className="col s5 m3 l2 header-towers p-0" />
-      <h1 className="col s7 m6 l8 white-text header-text">Jenga <br/> Companion</h1>
-      <img src={jenga} alt="jenga" className="col m3 l2 header-towers p-0 hide-on-small-only" />
+    <div className={`row blue darken-1 lb-header mbp valign-wrapper ${props.att}`}>
+      <h4 className={`${props.h4textcol} lb-header-text ${props.atts}`}>{props.h4text}</h4>
+      {props.moveButton}
+      {props.jengaButton}
+      {props.quitButton}
     </div>
   )    
 }

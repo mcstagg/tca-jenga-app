@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 
-const Leader = (props) => {
+const Footer = (props) => {
   
   return (
-    <div className={`row blue darken-1 lb-header valign-wrapper ${props.att}`}>
+    <div className={`row blue darken-1 lb-header mbp valign-wrapper ${props.att}`}>
       <h4 className={`${props.h4textcol} lb-header-text ${props.atts}`}>{props.h4text}</h4>
       {props.moveButton}
       {props.jengaButton}
@@ -13,4 +13,4 @@ const Leader = (props) => {
   )    
 }
 
-export default Leader;
+export default Footer;

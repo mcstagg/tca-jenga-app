@@ -1,19 +1,19 @@
 import React from 'react';
-import './materialize.css';
-import './App.css';
+import Nav from './Nav';
+import Banner from './Banner';
 import HomeStats from './HomeStats';
 import GameSetup from './GameSetup'; 
 import Gameplay from './Gameplay'; 
 import PostGame from './PostGame'; 
 import {Route} from 'react-router-dom';
-import Header from './Header';
-import Nav from './Nav';
+import './materialize.css';
+import './App.css';
 
 function App() {
   return (
     <div className="sml jenga container">
       <Nav />
-      <Header />
+      <Banner />
       <Route exact path="/" component={HomeStats}/>
       <Route exact path="/gameSetup" component={GameSetup}/>
       <Route exact path="/gameplay" component={Gameplay}/>
