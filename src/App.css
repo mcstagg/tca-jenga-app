@@ -13,6 +13,10 @@ body {
   font-family: 'Oi', cursive;
 }
 
+html {
+  min-width: 320px !important;
+}
+
 /* Navigation --------------------------------------------*/
 
 .nav {
@@ -213,6 +217,10 @@ input {
   margin-bottom: .5em !important;
 }
 
+.rc {
+  padding-left: 3em !important;
+}
+
 /* Post Game --------------------------------------*/
 
 .results {
@@ -224,16 +232,23 @@ input {
   font-size: 1.75em !important;
 }
 
-span {
-  font-size: 2em !important;
-}
-
 .rematch {
   text-align: center !important;
 }
 
 .sml {
   box-sizing: initial !important;
+}
+
+.rematch-btn {
+  text-align: center !important;
+  padding: 0em .5em 0em .5em !important;
+}
+
+.lb-header {
+  margin-top: .2em !important;
+  margin-bottom: 0em !important;
+  padding-left: 1em !important;
 }
 
 /* Responsivity/Media Queries ------------------------------*/
@@ -262,16 +277,22 @@ span {
     min-height: 10px !important;
   }
 
+  .rc {
+
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+  .checks {
+    font-size: .1em !important;
+  }
 }
 
 @media screen and (max-width: 400px) {
 
   .jenga {
     width: 100% !important;
-  }
-
-  .tables {
-    font-size: .7em;
   }
 
   .nav-links {
@@ -294,7 +315,15 @@ span {
 
   .header-text {
     text-align: left;
-    font-size: 2.5em;
+    font-size: 10vw;
+  }
+
+  .tables {
+    font-size: .7em;
+  }
+
+  .checks {
+    padding-bottom: 6em;
   }
 
   th {
@@ -308,6 +337,10 @@ span {
   .gameSetup {
     padding: 0em 1em 0em 1em !important;
     margin: 0;
+  }
+
+  .turn {
+    font-size: 3em !important;
   }
 
   .leaderboard {
@@ -383,7 +416,7 @@ span {
   }
 
   .marquis-mt {
-    margin-top: 3px !important;
+    margin-top: .2em !important;
   }
 }
 
@@ -400,7 +433,15 @@ span {
 
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 400px) {
+
+  .rematch-btn {
+    font-size: 4.2vw !important;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
 
   .lb-pad {
     padding-left: 1em !important;
@@ -428,6 +469,22 @@ span {
 
   .tables {
     font-size: .7em;
+  }
+
+}
+
+@media screen and (max-width: 540px) {
+
+  .prepare {
+    font-size: 1.5em;
+  }
+
+}
+
+@media screen and (max-width: 340px) {
+
+  .prepare {
+    font-size: 1.4em;
   }
 
 }
@@ -460,6 +517,14 @@ span {
 
   .tables {
     font-size: .2em;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .header-text {
+    text-align: left !important;
   }
 
 }
@@ -535,6 +600,22 @@ span {
 
 .pr-1 {
   padding-right: 1em !important;
+}
+
+.pr-2 {
+  padding-right: 1em !important;
+}
+
+.pr-3 {
+  padding-right: 3em !important;
+}
+
+.pr-4 {
+  padding-right: 4em !important;
+}
+
+.pr-5 {
+  padding-right: 5em !important;
 }
 
 .m-0 {

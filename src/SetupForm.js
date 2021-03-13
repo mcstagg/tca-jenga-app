@@ -25,11 +25,11 @@ const SetupForm = () => {
       </div>
 
       <form action="#">
-        <div className="row">
+        <div className="row checks">
           <div className="col s4 m4">
             <p className="">
             <label>
-            <input type="checkbox" className="setup" />
+            <input type="checkbox" className="" />
             <span className="">Mike S</span>
             </label>
             </p>
@@ -59,7 +59,7 @@ const SetupForm = () => {
             </p>
           </div>
 
-          <div className="col s4 m4 pl-2 play-col">
+          <div className="col s4 m4">
             <p>
             <label>
             <input type="checkbox" />
@@ -92,7 +92,7 @@ const SetupForm = () => {
             </p>
           </div>
 
-          <div className="col s4 pl-2">
+          <div className="col s4">
             <p>
             <label>
             <input type="checkbox" />

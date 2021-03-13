@@ -25,26 +25,26 @@ const Game = (props) => {
 
       <div>
         <form>
-          <h1 className="center mt-quarter">Mike's Turn</h1>
+          <h1 className="center mt-quarter turn">Mike's Turn</h1>
           <div className="row center">
             <h5 className="col s4 offset-s1 mt-0">Removed From:</h5>
             <h5 className="col s4 offset-s2 mt-0">Replaced On:</h5>
           </div>
 
           <div className="row center">
-            <div className="col s2 offset-s1">
+            <div className="col s3">
               <h6>Row:</h6>
               <input placeholder="00" id="first_name" type="text"   className="center validate in"></input>
             </div>
-            <div className="col s2 pl-1">
+            <div className="col s3">
               <h6>Column:</h6>
               <input placeholder="00" id="first_name" type="text" className="center validate in"></input>
             </div>
-            <div className="col s2 offset-s2">
+            <div className="col s3">
               <h6>Row:</h6>
               <input placeholder="00" id="first_name" type="text"   className="validate in center"></input>
             </div>
-            <div className="col s2 pl-1">
+            <div className="col s3">
               <h6>Column:</h6>
               <input placeholder="00" id="first_name" type="text" className="   validate in center"></input>
             </div>
