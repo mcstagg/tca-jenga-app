@@ -21,11 +21,11 @@ html {
 
 .nav {
   text-align: center !important;
-  padding: .8em 0em .8em 0em;
-  height: 3em;
+  padding: 0em 0em 0em 0em;
   margin: 0em !important;
   transition: background-color .2s ease-out;
   color: white !important;
+  height: 4em;
 }
 
 .nav:hover {
@@ -41,7 +41,12 @@ html {
   font-size: 1em !important;
 }
 
-.nav-links:hover {
+.nav-h6 {
+  padding: 1.2em 1em 1.2em 1em !important;
+  margin: 0em !important;
+}
+
+.nav-h6:hover {
   background-color: #29b6f6;
 }
 
@@ -82,6 +87,8 @@ html {
   text-align: left;
   color: white;
   margin-top: .3em !important;
+  padding-right: 0em !important;
+  padding-left: 0em !important;
 }
 
 /* Buttons -----------------------------------------------*/
@@ -245,12 +252,6 @@ input {
   padding: 0em .5em 0em .5em !important;
 }
 
-.lb-header {
-  margin-top: .2em !important;
-  margin-bottom: 0em !important;
-  padding-left: 1em !important;
-}
-
 /* Responsivity/Media Queries ------------------------------*/
 
 @media screen and (min-width: 1000px) {
@@ -263,7 +264,6 @@ input {
   .lb-header {
     margin-top: .2em !important;
     margin-bottom: 0em !important;
-    padding-left: 1em !important;
   }
 }
 
@@ -310,7 +310,6 @@ input {
   .lb-header {
     margin-top: .2em !important;
     margin-bottom: 0em !important;
-    padding-left: 1em !important;
   }
 
   .header-text {
@@ -441,7 +440,7 @@ input {
 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 700px) {
 
   .lb-pad {
     padding-left: 1em !important;
