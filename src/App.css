@@ -9,12 +9,12 @@
   font-size: calc(10px + 2vmin);
 }
 
-body {
-  font-family: 'Oi', cursive;
-}
-
 html {
   min-width: 320px !important;
+}
+
+body {
+  font-family: 'Oi', cursive;
 }
 
 /* Navigation --------------------------------------------*/
@@ -54,40 +54,58 @@ html {
   transform: translateY(0px);
 }
 
-/* Banner ----------------------------------------------*/
+/* Banner ------------------------------------------------*/
 
-.header {
+.banner {
   margin-top: .5em;
   margin-bottom: .5em;
   padding: 0em;
   height: 15em;
 }
 
-.header-towers { 
+.banner-towers { 
   margin: 0em;
   padding: 0em;
-  opacity: .65;
+  opacity: .8;
   height: 15em;
   position: relative;
 }
 
-.header-text {
+.banner-text {
   text-align: center;
   font-size: 7vw;
   padding: 0em;
   margin: 0em;
 }
 
-/* Header -----------------------------------------------*/
+/* Header ------------------------------------------------*/
 
-.lb-header {
+.header {
   padding-top: 1em;
   padding-right: 1em;
   padding-bottom: 1em;
   padding-left: 0em;
 }
 
-.lb-header-text {
+.header-text {
+  text-align: left;
+  color: white;
+  margin-top: .3em !important;
+  padding-right: 0em !important;
+  padding-left: 0em !important;
+
+}
+
+/* Footer ------------------------------------------------*/
+
+.footer {
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-left: 0em;
+}
+
+.footer-text {
   text-align: left;
   color: white;
   margin-top: .3em !important;
@@ -130,28 +148,10 @@ html {
   padding-left: 1em !important;
 }
 
-/* Stats ----------------------------------------------*/
-
-.ready {
-  text-align: center !important;
-}
-
-.stat-text {
-  font-size: 1em;
-}
-
-.post-text {
-  font-size: 1.4em !important;
-  padding: 10px !important;
-}
+/* Home-Stats --------------------------------------------*/
 
 .tables {
   table-layout: fixed;
-}
-
-.post-stats {
-  padding: 0em .5em 0em .8em !important;
-  margin: 1em !important;
 }
 
 th {
@@ -162,7 +162,15 @@ td {
   padding: 4px !important;
 }
 
-/* Game Setup ------------------------------------*/
+.stat-text {
+  font-size: 1em;
+}
+
+.ready {
+  text-align: center !important;
+}
+
+/* Game Setup --------------------------------------------*/
 
 .gameSetup {
   margin: 1em 1em 1em 1em;
@@ -173,6 +181,7 @@ td {
 
 input {
   font-family: 'Oi', cursive;
+  font-size: 1.75em !important;
 }
 
 .in {
@@ -196,7 +205,7 @@ input {
   text-align: center !important;
 }
 
-/* Gameplay ---------------------------------------*/
+/* Gameplay ----------------------------------------------*/
 
 .marquis-mt {
   margin-top: 0px !important;
@@ -237,23 +246,19 @@ input {
   padding-left: 3em !important;
 }
 
-/* Post Game --------------------------------------*/
+.game-pad {
+  text-align: center !important;
+}
+
+/* Post Game ---------------------------------------------*/
 
 .results {
   padding: 0em !important;
   margin: .1em !important;
 }
 
-input {
-  font-size: 1.75em !important;
-}
-
 .rematch {
   text-align: center !important;
-}
-
-.sml {
-  box-sizing: initial !important;
 }
 
 .rematch-btn {
@@ -261,16 +266,35 @@ input {
   padding: 0em .5em 0em .5em !important;
 }
 
-/* Responsivity/Media Queries ------------------------------*/
+.post-text {
+  font-size: 1.4em !important;
+  padding: 10px !important;
+}
+
+.post-stats {
+  padding: 0em .5em 0em .8em !important;
+  margin: 1em !important;
+}
+
+.sml {
+  box-sizing: initial !important;
+}
+
+/* Responsivity/Media Queries ----------------------------*/
 
 @media screen and (min-width: 1000px) {
-  .header-text {
+  .banner-text {
     font-size: 5em;
   }
 }
 
 @media screen and (max-width: 750px) {
-  .lb-header {
+  .header {
+    margin-top: .2em !important;
+    margin-bottom: 0em !important;
+  }
+
+  .footer {
     margin-top: .2em !important;
     margin-bottom: 0em !important;
   }
@@ -278,20 +302,58 @@ input {
   .mbp {
     padding-left: 1em !important;
   }
+
+  .htext-hide {
+    display: none !important;
+  }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 700px) {
 
-  .lb-header-text {
-    font-size: 6.5vw;
-    padding-top: 0 !important;
-    margin-top: .5em !important;
-    margin-left: 0em !important;
-    min-height: 10px !important;
+  .lb-pad {
+    padding-left: 0em !important;
   }
 
-  .rc {
+}
 
+@media screen and (max-width: 700px) {
+
+  .lb-pad {
+    text-align: center !important;
+    padding-left: 0em !important;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+
+  .tables {
+    font-size: .9em;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+  .row .col.sm3 {
+    width: 25% !important;
+    margin-left: auto !important;
+    left: auto !important;
+    right: auto !important;
+  }
+  
+  .row .col.sm4 {
+    width: 33.3333333333% !important;
+    margin-left: auto !important;
+    left: auto !important;
+    right: auto !important;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .banner-text {
+    text-align: left !important;
   }
 
 }
@@ -300,6 +362,58 @@ input {
   .checks {
     font-size: .1em !important;
   }
+}
+
+@media screen and (max-width: 540px) {
+
+  .prepare {
+    font-size: 1.5em;
+  }
+
+}
+
+@media screen and (max-width: 525px) {
+
+  .names3 {
+    font-size: 2.5em !important;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .tables {
+    font-size: .8em;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .header-text {
+    font-size: 6.5vw;
+    padding-top: 0 !important;
+    margin-top: .5em !important;
+    margin-left: 0em !important;
+    min-height: 10px !important;
+  }
+
+  .footer-text {
+    font-size: 6.5vw;
+    padding-top: 0 !important;
+    margin-top: .5em !important;
+    margin-left: 0em !important;
+    min-height: 10px !important;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+
+  .tables {
+    font-size: .7em;
+  }
+
 }
 
 @media screen and (max-width: 400px) {
@@ -315,17 +429,22 @@ input {
     margin: 0;
   }
 
+  .banner {
+    margin-top: .2em !important;
+    margin-bottom: 0em !important;
+  }
+
   .header {
     margin-top: .2em !important;
     margin-bottom: 0em !important;
   }
 
-  .lb-header {
+  .footer {
     margin-top: .2em !important;
     margin-bottom: 0em !important;
   }
 
-  .header-text {
+  .banner-text {
     text-align: left;
     font-size: 10vw;
   }
@@ -429,74 +548,16 @@ input {
   .marquis-mt {
     margin-top: .2em !important;
   }
-}
-
-.game-pad {
-  text-align: center !important;
-}
-
-@media screen and (max-width: 700px) {
-
-  .lb-pad {
-    text-align: center !important;
-    padding-left: 0em !important;
-  }
-
-}
-
-@media screen and (max-width: 700px) {
-
-  .lb-pad {
-    text-align: center !important;
-    padding-left: 0em !important;
-  }
-
-}
-
-@media screen and (max-width: 400px) {
 
   .rematch-btn {
     font-size: 4.2vw !important;
   }
-
 }
 
-@media screen and (min-width: 700px) {
-
-  .lb-pad {
-    padding-left: 0em !important;
-  }
-
-}
-
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 350px) {
 
   .tables {
-    font-size: .9em;
-  }
-
-}
-
-@media screen and (max-width: 500px) {
-
-  .tables {
-    font-size: .8em;
-  }
-
-}
-
-@media screen and (max-width: 450px) {
-
-  .tables {
-    font-size: .7em;
-  }
-
-}
-
-@media screen and (max-width: 540px) {
-
-  .prepare {
-    font-size: 1.5em;
+    font-size: .6em;
   }
 
 }
@@ -509,86 +570,7 @@ input {
 
 }
 
-@media screen and (max-width: 350px) {
-
-  .tables {
-    font-size: .6em;
-  }
-
-}
-
-@media screen and (max-width: 300px) {
-
-  .tables {
-    font-size: .5em;
-  }
-
-}
-
-@media screen and (max-width: 250px) {
-
-  .tables {
-    font-size: .3em;
-  }
-
-}
-
-@media screen and (max-width: 180px) {
-
-  .tables {
-    font-size: .2em;
-  }
-
-}
-
-@media screen and (max-width: 600px) {
-
-  .header-text {
-    text-align: left !important;
-  }
-
-}
-
-@media screen and (max-width: 525px) {
-
-  .names3 {
-    font-size: 2.5em !important;
-  }
-
-}
-
-@media screen and (max-width: 300px) {
-
-  .names3 {
-    font-size: 2em !important;
-  }
-
-}
-
-@media only screen and (max-width: 750px) {
-  .htext-hide {
-    display: none !important;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .row .col.sm3 {
-    width: 25% !important;
-    margin-left: auto !important;
-    left: auto !important;
-    right: auto !important;
-  }
-  
-  .row .col.sm4 {
-    width: 33.3333333333% !important;
-    margin-left: auto !important;
-    left: auto !important;
-    right: auto !important;
-  }
-
-}
-
-/* Quick Formatting -------------------------------------------*/
+/* Quick Formatting --------------------------------------*/
 
 .p-0 {
   padding: 0 !important;
