@@ -20,29 +20,20 @@ body {
 /* Navigation --------------------------------------------*/
 
 .nav {
-  text-align: center !important;
-  padding: 0em !important;
-  margin: 0em !important;
-  transition: background-color .2s ease-out;
-  color: white !important;
-}
-
-.nav:hover {
-  background-color:  #29b6f6;
+  text-align: center;
 }
 
 .nav-links {
-  color: white !important;
-  padding: 0em;
-  margin: 0em !important;
-  text-align: center !important;
+  color: white;
+  margin: 0em;
   font-weight: 545;
   font-size: 1em !important;
 }
 
 .nav-h6 {
   padding: 1.2em 1em 1.2em 1em !important;
-  margin: 0em !important;
+  margin: 0em;
+  transition: background-color .2s ease-out;
 }
 
 .nav-h6:hover {
@@ -50,7 +41,7 @@ body {
 }
 
 .nav-h6:active {
-  box-shadow: 0 1px #424242 !important;
+  box-shadow: 0 1px #424242;
   transform: translateY(0px);
 }
 
@@ -74,23 +65,23 @@ body {
 .banner-text {
   text-align: center;
   font-size: 7vw;
-  padding: 0em;
   margin: 0em;
+  padding: 0em;
 }
 
 /* Header ------------------------------------------------*/
 
 .header {
   padding-top: 1em;
-  padding-right: 1em;
+  padding-right: .5em;
   padding-bottom: 1em;
-  padding-left: 0em;
+  padding-left: .5em;
 }
 
 .header-text {
-  text-align: left;
+  text-align: center;
   color: white;
-  margin-top: .3em !important;
+  margin-top: .3em;
   padding-right: 0em !important;
   padding-left: 0em !important;
 
@@ -106,9 +97,9 @@ body {
 }
 
 .footer-text {
-  text-align: left;
+  text-align: center;
   color: white;
-  margin-top: .3em !important;
+  margin-top: .3em;
   padding-right: 0em !important;
   padding-left: 0em !important;
 
@@ -142,10 +133,6 @@ body {
 
 .blue-buttons:hover {
   background-color: #ab47bc !important;
-}
-
-.mbp {
-  padding-left: 1em !important;
 }
 
 /* Home-Stats --------------------------------------------*/
@@ -289,40 +276,10 @@ input {
 }
 
 @media screen and (max-width: 750px) {
-  .header {
-    margin-top: .2em !important;
-    margin-bottom: 0em !important;
-  }
-
-  .footer {
-    margin-top: .2em !important;
-    margin-bottom: 0em !important;
-  }
-
-  .mbp {
-    padding-left: 1em !important;
-  }
 
   .htext-hide {
     display: none !important;
   }
-}
-
-@media screen and (min-width: 700px) {
-
-  .lb-pad {
-    padding-left: 0em !important;
-  }
-
-}
-
-@media screen and (max-width: 700px) {
-
-  .lb-pad {
-    text-align: center !important;
-    padding-left: 0em !important;
-  }
-
 }
 
 @media screen and (max-width: 650px) {
@@ -364,14 +321,6 @@ input {
   }
 }
 
-@media screen and (max-width: 540px) {
-
-  .prepare {
-    font-size: 1.5em;
-  }
-
-}
-
 @media screen and (max-width: 525px) {
 
   .names3 {
@@ -384,26 +333,6 @@ input {
 
   .tables {
     font-size: .8em;
-  }
-
-}
-
-@media screen and (max-width: 500px) {
-
-  .header-text {
-    font-size: 6.5vw;
-    padding-top: 0 !important;
-    margin-top: .5em !important;
-    margin-left: 0em !important;
-    min-height: 10px !important;
-  }
-
-  .footer-text {
-    font-size: 6.5vw;
-    padding-top: 0 !important;
-    margin-top: .5em !important;
-    margin-left: 0em !important;
-    min-height: 10px !important;
   }
 
 }
@@ -430,16 +359,6 @@ input {
   }
 
   .banner {
-    margin-top: .2em !important;
-    margin-bottom: 0em !important;
-  }
-
-  .header {
-    margin-top: .2em !important;
-    margin-bottom: 0em !important;
-  }
-
-  .footer {
     margin-top: .2em !important;
     margin-bottom: 0em !important;
   }
@@ -505,10 +424,6 @@ input {
     padding: 0em !important;
   }
 
-  .ready {
-    padding: 0em 1em 0em 1em !important;
-  }
-
   .rematch {
     padding: 0em 1em 0em .5em !important;
   }
@@ -558,14 +473,6 @@ input {
 
   .tables {
     font-size: .6em;
-  }
-
-}
-
-@media screen and (max-width: 340px) {
-
-  .prepare {
-    font-size: 1.4em;
   }
 
 }
