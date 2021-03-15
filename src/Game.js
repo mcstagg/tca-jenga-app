@@ -25,26 +25,26 @@ const Game = (props) => {
 
       <div>
         <form>
-          <h1 className="center mt-quarter turn">Mike's Turn</h1>
+          <h3 className="center turn">Mike's Turn</h3>
           <div className="row center">
-            <h5 className="col s4 offset-s1 mt-0">Removed From:</h5>
-            <h5 className="col s4 offset-s2 mt-0">Replaced On:</h5>
+            <h5 className="col s4 offset-s1 from-on">Removed From:</h5>
+            <h5 className="col s4 offset-s2 from-on">Replaced On:</h5>
           </div>
 
           <div className="row center">
-            <div className="col s3">
+            <div className="col s3 rc">
               <h6>Row:</h6>
               <input placeholder="00" id="first_name" type="text"   className="center validate in"></input>
             </div>
-            <div className="col s3">
+            <div className="col s3 rc">
               <h6>Column:</h6>
               <input placeholder="00" id="first_name" type="text" className="center validate in"></input>
             </div>
-            <div className="col s3">
+            <div className="col s3 rc">
               <h6>Row:</h6>
               <input placeholder="00" id="first_name" type="text"   className="validate in center"></input>
             </div>
-            <div className="col s3">
+            <div className="col s3 rc">
               <h6>Column:</h6>
               <input placeholder="00" id="first_name" type="text" className="   validate in center"></input>
             </div>
@@ -52,11 +52,11 @@ const Game = (props) => {
           <div className="row">
             <div className="col s6 center">
               <h5>Height of Tower:</h5>
-              <h1 className="mb-quarter mt-half">27</h1>
+              <h1 className="mt-0 mb-0">27</h1>
             </div>
             <div className="col s6 center">
               <h5>Blocks Replaced:</h5>
-              <h1 className="mb-quarter mt-half">29</h1>
+              <h1 className="mt-0 mb-0">29</h1>
             </div>
           </div>
         </form>

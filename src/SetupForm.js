@@ -13,7 +13,7 @@ const SetupForm = () => {
 
       <div className="row">
         <form className="col s12">
-          <div className="row pl-1">
+          <div className="row">
           <input placeholder="Player Name" id="first_name" type="text" className="col m4 s6 validate"></input>
           <a className="col s5 m3 offset-s1 offset-m1   waves-effect waves-light btn blue-buttons   add-player">Add Player</a>
           </div>
@@ -26,7 +26,7 @@ const SetupForm = () => {
 
       <form action="#">
         <div className="row checks">
-          <div className="col s4 m4">
+          <div className="col s4 m4 choose">
             <p className="">
             <label>
             <input type="checkbox" className="" />
@@ -59,7 +59,7 @@ const SetupForm = () => {
             </p>
           </div>
 
-          <div className="col s4 m4">
+          <div className="col s4 m4 choose3">
             <p>
             <label>
             <input type="checkbox" />
@@ -92,7 +92,7 @@ const SetupForm = () => {
             </p>
           </div>
 
-          <div className="col s4">
+          <div className="col s4 m4 choose2">
             <p>
             <label>
             <input type="checkbox" />

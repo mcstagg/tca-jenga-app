@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 /* Structural --------------------------------------------*/
 
 .App-header {
@@ -25,13 +27,10 @@ body {
 
 .nav-links {
   color: white;
-  margin: 0em;
-  font-weight: 545;
-  font-size: 1em !important;
 }
 
 .nav-h6 {
-  padding: 1.2em 1em 1.2em 1em !important;
+  padding: .8em !important;
   margin: 0em;
   transition: background-color .2s ease-out;
 }
@@ -48,7 +47,7 @@ body {
 /* Banner ------------------------------------------------*/
 
 .banner {
-  margin-top: .5em;
+  margin-top: .2em;
   margin-bottom: .5em;
   padding: 0em;
   height: 15em;
@@ -57,25 +56,32 @@ body {
 .banner-towers { 
   margin: 0em;
   padding: 0em;
-  opacity: .8;
+  opacity: .75;
   height: 15em;
   position: relative;
 }
 
 .banner-text {
   text-align: center;
-  font-size: 7vw;
+  font-size: 8vw;
   margin: 0em;
-  padding: 0em;
+  padding: .25em !important;
+  text-align: left;
+  font-size: 11vw;
 }
 
 /* Header ------------------------------------------------*/
 
 .header {
-  padding-top: 1em;
+  padding-top: .5em;
   padding-right: .5em;
-  padding-bottom: 1em;
-  padding-left: .5em;
+  padding-bottom: .5em;
+  padding-left: 0em;
+  margin-top: .2em;
+}
+
+.game-head {
+  padding-left: .5em !important;
 }
 
 .header-text {
@@ -90,10 +96,11 @@ body {
 /* Footer ------------------------------------------------*/
 
 .footer {
-  padding-top: 1em;
-  padding-right: 1em;
-  padding-bottom: 1em;
+  padding-top: .5em;
+  padding-right: .5em;
+  padding-bottom: .5em;
   padding-left: 0em;
+  margin-top: .2em;
 }
 
 .footer-text {
@@ -102,7 +109,6 @@ body {
   margin-top: .3em;
   padding-right: 0em !important;
   padding-left: 0em !important;
-
 }
 
 /* Buttons -----------------------------------------------*/
@@ -149,12 +155,24 @@ td {
   padding: 4px !important;
 }
 
-.stat-text {
-  font-size: 1em;
+.leaderboard {
+  font-size: 3.25vw;
+}
+
+.leader {
+  padding-left: 0em !important;
 }
 
 .ready {
   text-align: center !important;
+}
+
+.ft-btn-play {
+
+}
+
+.play {
+  font-size: 3em !important;
 }
 
 /* Game Setup --------------------------------------------*/
@@ -171,8 +189,8 @@ input {
   font-size: 1.75em !important;
 }
 
-.in {
-  font-family: 'Oi', cursive;
+input.in {
+  font-size: 2.5em !important;
 }
 
 .add-player {
@@ -188,14 +206,28 @@ input {
   color: black !important;
 }
 
+.choose {
+  padding-left: 0em !important;
+}
+
+.choose2 {
+  padding-right: 0em !important;
+  padding-left: 15em !important;
+}
+
+.choose3 {
+  padding-left: 10em !important;
+}
+
 .prepare {
   text-align: center !important;
+  font-size: 6.5vw;
 }
 
 /* Gameplay ----------------------------------------------*/
 
 .marquis-mt {
-  margin-top: 0px !important;
+  margin-top: 0em !important;
 }
 
 .gameplay {
@@ -208,29 +240,35 @@ input {
 
 .names {
   padding: 0em !important;
+  margin-top: 0em !important;
 }
 
 .names2 {
   padding: 1em 0em 1em 0em !important;
+  margin-top: .25em !important;
 }
 
 .vs {
   text-align: center !important;
 }
 
-.game-header{
-  outline: thick solid black;
-  margin: 0em !important;
-  padding: 1em;
+.turn {
+  margin-top: 0em;
+}
+
+.from-on {
+  padding: 0em !important;
+  margin-top: 0em;
+}
+
+.rc {
+  padding-left: .4em !important;
+  padding-right: .4em !important;
 }
 
 .clocks {
   padding: .01em 1em .1em 1em !important;
   margin-bottom: .5em !important;
-}
-
-.rc {
-  padding-left: 3em !important;
 }
 
 .game-pad {
@@ -269,25 +307,11 @@ input {
 
 /* Responsivity/Media Queries ----------------------------*/
 
-@media screen and (min-width: 1000px) {
-  .banner-text {
-    font-size: 5em;
-  }
-}
-
 @media screen and (max-width: 750px) {
 
   .htext-hide {
     display: none !important;
   }
-}
-
-@media screen and (max-width: 650px) {
-
-  .tables {
-    font-size: .9em;
-  }
-
 }
 
 @media only screen and (min-width: 600px) {
@@ -307,14 +331,6 @@ input {
 
 }
 
-@media screen and (max-width: 600px) {
-
-  .banner-text {
-    text-align: left !important;
-  }
-
-}
-
 @media screen and (max-width: 550px) {
   .checks {
     font-size: .1em !important;
@@ -329,47 +345,15 @@ input {
 
 }
 
-@media screen and (max-width: 500px) {
-
-  .tables {
-    font-size: .8em;
-  }
-
-}
-
-@media screen and (max-width: 450px) {
-
-  .tables {
-    font-size: .7em;
-  }
-
-}
-
 @media screen and (max-width: 400px) {
 
   .jenga {
     width: 100% !important;
   }
 
-  .nav-links {
-    font-size: 3.2vw;
-    text-align: center !important;
-    padding: 0;
-    margin: 0;
-  }
-
   .banner {
     margin-top: .2em !important;
     margin-bottom: 0em !important;
-  }
-
-  .banner-text {
-    text-align: left;
-    font-size: 10vw;
-  }
-
-  .tables {
-    font-size: .7em;
   }
 
   .checks {
@@ -389,14 +373,6 @@ input {
     margin: 0;
   }
 
-  .turn {
-    font-size: 3em !important;
-  }
-
-  .leaderboard {
-    margin-left: 3px !important;
-  }
-
   .results {
     padding: 0em !important;
     margin: .1em !important;
@@ -404,20 +380,6 @@ input {
 
   span {
     font-size: 1em !important;
-  }
-
-  .nav {
-    font-size: 1em;
-    padding-top: 0em !important;
-  }
-
-  .nav-links {
-    font-size: .5em;
-    padding-left: 0 !important;
-    padding-right: 0em !important;
-    padding-top: 0em !important;
-    padding-bottom: 0em !important;
-    margin-top: 0em !important;
   }
 
   .check {
@@ -460,21 +422,9 @@ input {
     padding-left: 1em !important;
   }
 
-  .marquis-mt {
-    margin-top: .2em !important;
-  }
-
   .rematch-btn {
     font-size: 4.2vw !important;
   }
-}
-
-@media screen and (max-width: 350px) {
-
-  .tables {
-    font-size: .6em;
-  }
-
 }
 
 /* Quick Formatting --------------------------------------*/
