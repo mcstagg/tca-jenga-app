@@ -8,25 +8,25 @@ const SetupForm = () => {
     <div className="gameSetup">
 
       <div className="row">
-        <h4 className="left-align">Add a Player:</h4>
+        <h4 className="left-align add-player-txt">Add a Player:</h4>
       </div>
 
       <div className="row">
         <form className="col s12">
           <div className="row">
           <input placeholder="Player Name" id="first_name" type="text" className="col m4 s6 validate"></input>
-          <a className="col s5 m3 offset-s1 offset-m1   waves-effect waves-light btn blue-buttons   add-player">Add Player</a>
+          <a className="col s5 m3 offset-s1 offset-m1   waves-effect waves-light btn blue-buttons   add-player-btn">Add Player</a>
           </div>
         </form>
       </div>
 
       <div className="row">
-        <h4 className="left-align">Choose Players:</h4>
+        <h4 className="left-align choose">Choose Players:</h4>
       </div>
 
       <form action="#">
         <div className="row checks">
-          <div className="col s4 m4 choose">
+          <div className="col s4 m4 column1">
             <p className="">
             <label>
             <input type="checkbox" className="" />

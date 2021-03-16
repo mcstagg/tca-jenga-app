@@ -62,7 +62,7 @@ const Game = (props) => {
         </form>
       </div>
 
-      <div className="row mt-half center">
+      <div className="row center mt-half">
 
         <div className="col s12 m4 p-0 center">
           <div className="clocks card-panel light-blue lighten-1 center">
