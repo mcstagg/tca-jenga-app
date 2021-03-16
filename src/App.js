@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="sml jenga container">
+    <div className="jenga container">
       <Nav />
       <Banner />
       <Route exact path="/" component={HomeStats}/>

@@ -34,7 +34,7 @@ body {
 }
 
 .nav-h6 {
-  padding: 1em !important;
+  padding: .9em !important;
   margin: 0em;
   transition: background-color .2s ease-out;
 }
@@ -94,7 +94,7 @@ body {
   margin-top: .3em;
   padding-right: 0em !important;
   padding-left: 0em !important;
-
+  text-decoration: underline;
 }
 
 /* Footer ------------------------------------------------*/
@@ -113,6 +113,7 @@ body {
   margin-top: .3em;
   padding-right: 0em !important;
   padding-left: 0em !important;
+  text-decoration: underline;
 }
 
 /* Buttons -----------------------------------------------*/
@@ -152,15 +153,29 @@ body {
 }
 
 th {
-  padding: 4px !important;
+  padding: .25em .25em;
+  text-align: left;
+  font-size: 1em;
 }
 
 td {
-  padding: 4px !important;
+  padding: .3em !important;
 }
 
 .leaderboard {
-  font-size: .75em;
+  font-size: 1em;
+}
+
+.head-txt {
+  font-size: .7em;
+}
+
+.ranking {
+  padding-left: .3em;
+}
+
+.player {
+  padding-left: .5em !important;
 }
 
 .leader {
@@ -204,6 +219,7 @@ input.in {
 .add-player-txt {
   margin: .4em 0em .5em 0em;
   text-align: center;
+  text-decoration: underline;
 }
 
 .add-player-btn {
@@ -213,7 +229,7 @@ input.in {
 
 .validate {
   margin: 0em !important;
-  padding-left: .2em !important;
+  padding-left: 0em !important;
   padding-right: 0em !important;
 }
 
@@ -221,6 +237,7 @@ input.in {
   padding-left: 0em !important;
   margin: .5em 0em;
   text-align: center;
+  text-decoration: underline;
 }
 
 .choose2 {
@@ -281,6 +298,7 @@ span {
 
 .turn {
   margin-top: .25em;
+  text-decoration: underline;
 }
 
 .from-on {
@@ -288,9 +306,30 @@ span {
   margin-top: 0em;
 }
 
+.row-label1 {
+  padding-left: 0em;
+}
+
+.col-label1 {
+  padding-left: 0em;
+}
+
+.row-label2 {
+  padding-left: 0em;
+}
+
+.col-label2 {
+  padding-left: 0em;
+}
+
 .rc {
   padding-left: .4em !important;
   padding-right: .4em !important;
+}
+
+.numbers {
+  padding: .1em;
+  margin: 0em;
 }
 
 .clocks {
@@ -339,8 +378,9 @@ table {
 
 .indi-stats {
   padding: 0em;
-  margin: .25em;
+  margin: .25em 0em .1em 0em;
   text-align: center;
+  text-decoration: underline;
 }
 
 .post-text {
@@ -348,12 +388,8 @@ table {
 }
 
 .post-stats {
-  padding: 0em .5em 0em .8em !important;
+  padding: .1em 0em .1em 0em !important;
   text-align: center;
-}
-
-.sml {
-  box-sizing: initial !important;
 }
 
 /* Responsivity/Media Queries ----------------------------*/

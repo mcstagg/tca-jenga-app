@@ -33,30 +33,30 @@ const Game = (props) => {
 
           <div className="row center">
             <div className="col s3 rc">
-              <h6>Row:</h6>
-              <input placeholder="00" id="first_name" type="text"   className="center validate in"></input>
-            </div>
-            <div className="col s3 rc">
-              <h6>Column:</h6>
+              <h6 className="row-label1">Row:</h6>
               <input placeholder="00" id="first_name" type="text" className="center validate in"></input>
             </div>
             <div className="col s3 rc">
-              <h6>Row:</h6>
+              <h6 className="col-label1">Column:</h6>
+              <input placeholder="00" id="first_name" type="text" className="center validate in"></input>
+            </div>
+            <div className="col s3 rc">
+              <h6 className="row-label2">Row:</h6>
               <input placeholder="00" id="first_name" type="text"   className="validate in center"></input>
             </div>
             <div className="col s3 rc">
-              <h6>Column:</h6>
+              <h6 className="col-label2">Column:</h6>
               <input placeholder="00" id="first_name" type="text" className="   validate in center"></input>
             </div>
           </div>
           <div className="row">
             <div className="col s6 center">
               <h5>Height of Tower:</h5>
-              <h4 className="mt-0 mb-0">27</h4>
+              <h4 className="numbers">27</h4>
             </div>
             <div className="col s6 center">
               <h5>Blocks Replaced:</h5>
-              <h4 className="mt-0 mb-0">29</h4>
+              <h4 className="numbers">29</h4>
             </div>
           </div>
         </form>
