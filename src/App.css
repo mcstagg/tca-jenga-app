@@ -19,6 +19,10 @@ body {
   font-family: 'Oi', cursive;
 }
 
+.jenga {
+  width: 100% !important;
+}
+
 /* Navigation --------------------------------------------*/
 
 .nav {
@@ -30,7 +34,7 @@ body {
 }
 
 .nav-h6 {
-  padding: .8em !important;
+  padding: 1em !important;
   margin: 0em;
   transition: background-color .2s ease-out;
 }
@@ -156,7 +160,7 @@ td {
 }
 
 .leaderboard {
-  font-size: 3.25vw;
+  font-size: .75em;
 }
 
 .leader {
@@ -165,10 +169,6 @@ td {
 
 .ready {
   text-align: center !important;
-}
-
-.ft-btn-play {
-
 }
 
 .play {
@@ -221,7 +221,6 @@ input.in {
 
 .prepare {
   text-align: center !important;
-  font-size: 6.5vw;
 }
 
 /* Gameplay ----------------------------------------------*/
@@ -244,8 +243,13 @@ input.in {
 }
 
 .names2 {
-  padding: 1em 0em 1em 0em !important;
-  margin-top: .25em !important;
+  padding: 1.5em 0em 1.5em 0em !important;
+  margin: .25em 0em 1em 0em !important;
+}
+
+.names3 {
+  margin: 0em !important;
+  font-size: 2.5em;
 }
 
 .vs {
@@ -279,7 +283,16 @@ input.in {
 
 .results {
   padding: 0em !important;
-  margin: .1em !important;
+  margin: .1em 0em 0em .1em !important;
+}
+
+.results2 {
+  padding: 0em !important;
+  margin: 0em 0em 0em .1em !important;
+}
+
+table {
+  margin-bottom: 0em !important;
 }
 
 .rematch {
@@ -291,14 +304,19 @@ input.in {
   padding: 0em .5em 0em .5em !important;
 }
 
+.indi-stats {
+  padding: 0em;
+  margin: .25em;
+  text-align: center;
+}
+
 .post-text {
-  font-size: 1.4em !important;
-  padding: 10px !important;
+  font-size: 1.25em !important;
 }
 
 .post-stats {
   padding: 0em .5em 0em .8em !important;
-  margin: 1em !important;
+  text-align: center;
 }
 
 .sml {
@@ -337,19 +355,7 @@ input.in {
   }
 }
 
-@media screen and (max-width: 525px) {
-
-  .names3 {
-    font-size: 2.5em !important;
-  }
-
-}
-
 @media screen and (max-width: 400px) {
-
-  .jenga {
-    width: 100% !important;
-  }
 
   .banner {
     margin-top: .2em !important;
@@ -373,21 +379,12 @@ input.in {
     margin: 0;
   }
 
-  .results {
-    padding: 0em !important;
-    margin: .1em !important;
-  }
-
   span {
     font-size: 1em !important;
   }
 
   .check {
     padding: 0em !important;
-  }
-
-  .rematch {
-    padding: 0em 1em 0em .5em !important;
   }
 
   .marquis {

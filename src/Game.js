@@ -8,17 +8,17 @@ const Game = (props) => {
       <div className="row marquis-mt">
         <div className="col s5 m5 names">
           <div className="card-panel light-blue lighten-1 blue-buttons center names2">
-            <h2 className="white-text names3">Mike</h2>
+            <h4 className="white-text names3">Mike</h4>
           </div>
         </div>
         <div className="col s2 m2 names">
           <div className="card-panel blue darken-1 center names2">
-            <h2 className="white-text names3">VS</h2>
+            <h4 className="white-text names3">VS</h4>
           </div>
         </div>
         <div className="col s5 m5 names">
           <div className="card-panel light-blue lighten-1 blue-buttons center names2">
-            <h2 className="white-text names3">Travis</h2>
+            <h4 className="white-text names3">Travis</h4>
           </div>
         </div>
       </div>
@@ -52,11 +52,11 @@ const Game = (props) => {
           <div className="row">
             <div className="col s6 center">
               <h5>Height of Tower:</h5>
-              <h1 className="mt-0 mb-0">27</h1>
+              <h4 className="mt-0 mb-0">27</h4>
             </div>
             <div className="col s6 center">
               <h5>Blocks Replaced:</h5>
-              <h1 className="mt-0 mb-0">29</h1>
+              <h4 className="mt-0 mb-0">29</h4>
             </div>
           </div>
         </form>
