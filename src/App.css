@@ -19,10 +19,6 @@ body {
   font-family: 'Oi', cursive;
 }
 
-.jenga {
-  width: 100% !important;
-}
-
 /* Navigation --------------------------------------------*/
 
 .nav {
@@ -420,8 +416,7 @@ table {
 /* Responsivity/Media Queries ----------------------------*/
 
 @media only screen and (min-width: 321px) {
-  .banner-text {
-  }
+  
 }
 
 @media screen and (max-width: 510px) {
@@ -433,7 +428,7 @@ table {
 @media screen and (min-width: 510px) {
   .banner-text {
     text-align: center;
-    font-size: 7vw;
+    font-size: 6vw;
   }
 }
 
@@ -455,13 +450,14 @@ table {
   }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (max-width: 601px) {
   .jenga {
-    width: 85% !important;
+    width: 100% !important;
   }
 }
 
 @media screen and (min-width: 501px) {
+  
   .header-text{
     text-align: left;
     padding-left: 1em !important;
@@ -505,17 +501,23 @@ table {
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1200px) {
 
   .htext-hide {
     display: none !important;
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
+  .header-text {
+    padding-left: 0em !important;
+  }
+}
 
-  .jenga {
-    width: 75% !important;
+@media screen and (min-width: 1110px) {
+
+  .banner-text {
+    font-size: 4.5em;
   }
 }
 
