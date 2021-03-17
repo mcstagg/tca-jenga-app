@@ -82,11 +82,20 @@ body {
 
 .banner-text {
   text-align: center;
-  font-size: 8vw;
-  margin: 0em;
+  margin: 0em !important;
   padding: .25em !important;
   text-align: left;
-  font-size: 11vw;
+  margin: 0em;
+  align-items: center;
+  font-size: 2.5em;
+}
+
+.tower1 {
+  margin-left: 0em !important;
+}
+
+.tower2 {
+  margin-left: 0em !important;
 }
 
 /* Header ------------------------------------------------*/
@@ -410,6 +419,24 @@ table {
 
 /* Responsivity/Media Queries ----------------------------*/
 
+@media only screen and (min-width: 321px) {
+  .banner-text {
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .tower2 {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 510px) {
+  .banner-text {
+    text-align: center;
+    font-size: 7vw;
+  }
+}
+
 @media screen and (min-width: 476px) {
   .home-stats-link {
     padding: 1.5em .92em !important;
@@ -428,6 +455,12 @@ table {
   }
 }
 
+@media screen and (min-width: 601px) {
+  .jenga {
+    width: 85% !important;
+  }
+}
+
 @media screen and (min-width: 501px) {
   .header-text{
     text-align: left;
@@ -440,11 +473,8 @@ table {
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (min-width: 551px) {
 
-  .htext-hide {
-    display: none !important;
-  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -462,6 +492,31 @@ table {
     right: auto !important;
   }
 
+}
+
+@media screen and (max-width: 601px) {
+  .tower1 {
+    max-width: 150.4px;
+  }
+
+  .tower2 {
+    max-width: 150.4px;
+    min-width: 150.4px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+  .htext-hide {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  .jenga {
+    width: 75% !important;
+  }
 }
 
 /* Quick Formatting --------------------------------------*/
