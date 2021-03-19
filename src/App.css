@@ -216,21 +216,12 @@ td {
 .gameSetup {
   margin: 0em 0em .2em 0em !important;
   padding: 0em .5em 0em .5em;
-  text-align: left;
-}
 
-.players {
-  border-style: solid;
-  border-width: 3px;
-  margin: 1em 0em 1em 0em;
-  padding: 1em 2em 1em 2em;
-  text-align: left;
-  color: black !important;
 }
 
 input {
   font-family: 'Oi', cursive;
-  font-size: 1.75em !important;
+  font-size: 1.5em !important;
 }
 
 input.in {
@@ -248,10 +239,11 @@ input.in {
   margin-left: 1.25em !important;
 }
 
+.name-input {
+  text-align: center !important;
+}
+
 .validate {
-  margin: 0em !important;
-  padding-left: 0em !important;
-  padding-right: 0em !important;
 }
 
 .choose {
@@ -261,22 +253,18 @@ input.in {
   text-decoration: underline;
 }
 
-.choose2 {
-  padding-right: 0em !important;
-  padding-left: 15em !important;
+.column1 {
+  margin-left: 0em !important;
+  padding-left: 0em !important;
 }
 
-.choose3 {
+.column2 {
   padding-left: 10em !important;
 }
 
-.column1 {
-  margin-left: 0em !important;
-  padding-left: 1em !important;
-}
-
-.checks {
-  padding-bottom: 3em;
+.column3 {
+  padding-right: 0em !important;
+  padding-left: 15em !important;
 }
 
 span {
@@ -285,6 +273,12 @@ span {
 
 .checks {
   font-size: .1em !important;
+  padding: 0em !important;
+  width: 100%;
+}
+
+.checks {
+  
 }
 
 .prepare {
@@ -415,20 +409,13 @@ table {
 
 /* Responsivity/Media Queries ----------------------------*/
 
-@media only screen and (min-width: 321px) {
-  
-}
-
-@media screen and (max-width: 510px) {
-  .tower2 {
-    display: none !important;
+@media screen and (min-width: 351px) {
+  .checks {
+    padding: 10em !important;
   }
-}
 
-@media screen and (min-width: 510px) {
-  .banner-text {
-    text-align: center;
-    font-size: 6vw;
+  .column1 {
+
   }
 }
 
@@ -450,9 +437,16 @@ table {
   }
 }
 
-@media screen and (max-width: 601px) {
-  .jenga {
-    width: 100% !important;
+@media screen and (max-width: 510px) {
+  .tower2 {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 510px) {
+  .banner-text {
+    text-align: center;
+    font-size: 6vw;
   }
 }
 
@@ -460,8 +454,12 @@ table {
   
   .header-text{
     text-align: left;
-    padding-left: 1em !important;
+    padding-left: 1em;
     font-size: 2.2em;
+  }
+
+  .head-text {
+    padding-left: 1em !important;
   }
 
   .footer-text {
@@ -488,9 +486,17 @@ table {
     right: auto !important;
   }
 
+  .checks {
+    margin-left: 30em !important;
+  }
+
 }
 
 @media screen and (max-width: 601px) {
+  .jenga {
+    width: 100% !important;
+  }
+
   .tower1 {
     max-width: 150.4px;
   }
@@ -501,6 +507,15 @@ table {
   }
 }
 
+@media only screen and (min-width: 800px) {
+  .checks {
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  
+}
+
 @media screen and (max-width: 1200px) {
 
   .htext-hide {
@@ -508,9 +523,12 @@ table {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1201px) {
   .header-text {
-    padding-left: 0em !important;
+  }
+
+  .checks {
+    padding: 0em !important;
   }
 }
 
@@ -573,6 +591,10 @@ table {
 
 .m-0 {
   margin: 0 !important;
+}
+
+.ml-h {
+  margin-left: .5em !important;
 }
 
 .m-1 {

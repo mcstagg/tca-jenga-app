@@ -11,11 +11,11 @@ const SetupForm = () => {
         <h4 className="left-align add-player-txt">Add a Player:</h4>
       </div>
 
-      <div className="row">
-        <form className="col s12">
-          <div className="row">
-          <input placeholder="Player Name" id="first_name" type="text" className="col m4 s6 validate"></input>
-          <a className="col s5 m3 offset-s1 offset-m1   waves-effect waves-light btn blue-buttons   add-player-btn">Add Player</a>
+      <div className="">
+        <form className="">
+          <div className="row name-input">
+          <input placeholder="Player Name" id="first_name" type="text" className="col s5 m4 l3 offset-s1 offset-m2 offset-l3 validate"></input>
+          <a className="col s5 m4 l3 offset-m1 waves-effect waves-light btn blue-buttons add-player-btn">Add Player</a>
           </div>
         </form>
       </div>
@@ -59,7 +59,7 @@ const SetupForm = () => {
             </p>
           </div>
 
-          <div className="col s4 m4 choose3">
+          <div className="col s4 m4 column2">
             <p>
             <label>
             <input type="checkbox" />
@@ -92,7 +92,7 @@ const SetupForm = () => {
             </p>
           </div>
 
-          <div className="col s4 m4 choose2">
+          <div className="col s4 m4 column3">
             <p>
             <label>
             <input type="checkbox" />
