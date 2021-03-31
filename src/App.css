@@ -175,6 +175,7 @@ body {
 th {
   padding: .25em .25em;
   font-size: 1em; 
+  font-weight: bold;
   text-align: center !important;
 }
 
@@ -216,7 +217,6 @@ td {
 .gameSetup {
   margin: 0em 0em .2em 0em !important;
   padding: 0em .5em 0em .5em;
-
 }
 
 input {
