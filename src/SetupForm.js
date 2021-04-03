@@ -1,8 +1,19 @@
 import React from 'react';
 import './materialize.css';
 import './App.css';
+import { useEffect } from 'react';
 
-const SetupForm = () => {
+const SetupForm = (props) => {
+
+  const [mikeIsChecked, setMikeIsChecked] = React.useState(false);
+  const handleChange = (event) => {
+    setMikeIsChecked(event.target.checked);
+    
+  }
+  useEffect(()=> {
+
+    props.setFormIsValid(mikeIsChecked);
+  }, [mikeIsChecked]);
   
   return (
     <div className="gameSetup">
@@ -29,7 +40,7 @@ const SetupForm = () => {
           <div className="col s4 m4 column1">
             <p className="">
             <label>
-            <input type="checkbox" className="" />
+            <input type="checkbox" onChange={handleChange} checked={mikeIsChecked} />
             <span className="">Mike S</span>
             </label>
             </p>
