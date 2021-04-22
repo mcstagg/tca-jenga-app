@@ -3,17 +3,9 @@ import './materialize.css';
 import './App.css';
 import { useEffect } from 'react';
 
-const SetupForm = (props) => {
+const SetupForm = ({addPlayer, handleChecked, players}) => {
 
-  const [mikeIsChecked, setMikeIsChecked] = React.useState(false);
-  const handleChange = (event) => {
-    setMikeIsChecked(event.target.checked);
-    
-  }
-  useEffect(()=> {
-
-    props.setFormIsValid(mikeIsChecked);
-  }, [mikeIsChecked]);
+  const [playerName, setPlayerName] = React.useState('');
   
   return (
     <div className="gameSetup">
@@ -25,8 +17,19 @@ const SetupForm = (props) => {
       <div className="">
         <form className="">
           <div className="row name-input">
-          <input placeholder="Player Name" id="first_name" type="text" className="col s5 m4 l3 offset-s1 offset-m2 offset-l3 validate"></input>
-          <a className="col s5 m4 l3 offset-m1 waves-effect waves-light btn blue-buttons add-player-btn">Add Player</a>
+          <input 
+            placeholder="Player Name" 
+            id="first_name" 
+            type="text" 
+            className="col s5 m4 l3 offset-s1 offset-m2 offset-l3 validate"
+            value={playerName}
+            onChange={e => setPlayerName(e.target.value)}
+          />
+          <a className="col s5 m4 l3 offset-m1 waves-effect waves-light btn blue-buttons add-player-btn"
+             onClick={() => {addPlayer(playerName); setPlayerName('');}}
+          >
+            Add Player
+          </a>
           </div>
         </form>
       </div>
@@ -38,102 +41,24 @@ const SetupForm = (props) => {
       <form action="#">
         <div className="row checks">
           <div className="col s4 m4 column1">
-            <p className="">
-            <label>
-            <input type="checkbox" onChange={handleChange} checked={mikeIsChecked} />
-            <span className="">Mike S</span>
-            </label>
-            </p>
-            <p>
-            <label>
-            <input type="checkbox" />
-            <span>Travis</span>
-            </label>
-            </p>
-            <p>
-            <label>
-            <input type="checkbox" />
-            <span>Eric J</span>
-            </label>
-            </p>
-            <p>
-            <label>
-            <input type="checkbox" />
-            <span>John J</span>
-            </label>
-            </p>
-            <p>
-            <label>
-            <input type="checkbox" />
-            <span>Jeremey</span>
-            </label>
-            </p>
+            {players.map((player, index) => ( 
+
+              <p className="">
+              <label>
+              <input checked={player.checked} type="checkbox" onChange={(e) => handleChecked(index, e.target.checked)}/>
+              <span className="">{player.name}</span>
+              </label>
+              </p>
+
+            ))}
           </div>
 
           <div className="col s4 m4 column2">
-            <p>
-            <label>
-            <input type="checkbox" />
-            <span>Scotty</span>
-            </label>
-            </p>
-            <p>
-            <label>
-            <input type="checkbox" />
-            <span>Mark L</span>
-            </label>
-            </p>
-            <p>
-            <label>
-            <input type="checkbox" />
-            <span>DCP</span>
-            </label>
-            </p>
-            <p>
-            <label>
-            <input type="checkbox" />
-            <span>Danny</span>
-            </label>
-            </p>
-            <p>
-            <label>
-            <input type="checkbox" />
-            <span>Terje</span>
-            </label>
-            </p>
+           
           </div>
 
           <div className="col s4 m4 column3">
-            <p>
-            <label>
-            <input type="checkbox" />
-            <span>Jussi</span>
-            </label>
-            </p>
-            <p>
-            <label>
-            <input type="checkbox" />
-            <span>Torstein</span>
-            </label>
-            </p>
-            <p>
-            <label>
-            <input type="checkbox" />
-            <span>Haldor</span>
-            </label>
-            </p>
-            <p>
-            <label>
-            <input type="checkbox" />
-            <span>Ben</span>
-            </label>
-            </p>
-            <p>
-            <label>
-            <input type="checkbox" />
-            <span>Jamie</span>
-            </label>
-            </p>
+            
           </div>
 
         </div>
