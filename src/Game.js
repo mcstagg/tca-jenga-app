@@ -1,6 +1,7 @@
 import React from 'react';
+import Clock from './Clock';
 
-const Game = (props) => {
+const Game = ({players}) => {
   
   return (  
     
@@ -8,7 +9,7 @@ const Game = (props) => {
       <div className="row marquis-mt">
         <div className="col s5 m5 names">
           <div className="card-panel light-blue lighten-1 blue-buttons center names2">
-            <h4 className="white-text names3">Mike</h4>
+            <h4 className="white-text names3">{players[0].name}</h4>
           </div>
         </div>
         <div className="col s2 m2 names">
@@ -18,7 +19,7 @@ const Game = (props) => {
         </div>
         <div className="col s5 m5 names">
           <div className="card-panel light-blue lighten-1 blue-buttons center names2">
-            <h4 className="white-text names3">Travis</h4>
+            <h4 className="white-text names3">{players[1].name}</h4>
           </div>
         </div>
       </div>
@@ -67,7 +68,7 @@ const Game = (props) => {
         <div className="col s12 m4 p-0 center">
           <div className="clocks card-panel light-blue lighten-1 center">
             <h5 className="clock">Game Clock</h5>
-            <h3 className="white-text center time">00:41:44</h3>
+            <h3 className="white-text center time"><Clock /></h3>
           </div>
         </div>
 

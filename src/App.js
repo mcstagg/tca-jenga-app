@@ -10,13 +10,20 @@ import './materialize.css';
 import './App.css';
 
 function App() {
+
+  const [players, setPlayers] = React.useState([]);
+
   return (
     <div className="jenga container">
       <Nav />
       <Banner />
       <Route exact path="/" component={HomeStats}/>
-      <Route exact path="/gameSetup" component={GameSetup}/>
-      <Route exact path="/gameplay" component={Gameplay}/>
+      <Route exact path="/gameSetup">
+        <GameSetup players={players} setPlayers={setPlayers}/>
+      </Route>
+      <Route exact path="/gameplay">
+        <Gameplay players={players} setPlayers={setPlayers}/>
+      </Route>
       <Route exact path="/postGame" component={PostGame}/>
     </div>
   );

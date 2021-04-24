@@ -7,7 +7,7 @@ import Modal from './Modal';
 import Button from 'react-bootstrap/Button';
 import { useHistory } from 'react-router-dom';
 
-const GameSetup = () => {
+const GameSetup = ({players, setPlayers}) => {
 
   const history = useHistory();
 
@@ -24,8 +24,6 @@ const GameSetup = () => {
       history.push('/gameplay');
     }
   }
-
-  const [players, setPlayers] = React.useState([]);
 
   const handleChecked = (index, checked) => {
     let newPlayers = players.slice();
