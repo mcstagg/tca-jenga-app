@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState} from 'react';
 import Nav from './Nav';
 import Banner from './Banner';
 import HomeStats from './HomeStats';
@@ -11,8 +11,8 @@ import './App.css';
 
 function App() {
 
-  const [players, setPlayers] = React.useState([]);
-
+  const [players, setPlayers] = useState([]);
+  const [moves, setMoves] = useState([]);
   return (
     <div className="jenga container">
       <Nav />
@@ -22,9 +22,11 @@ function App() {
         <GameSetup players={players} setPlayers={setPlayers}/>
       </Route>
       <Route exact path="/gameplay">
-        <Gameplay players={players} setPlayers={setPlayers}/>
+        <Gameplay moves={moves} setMoves={setMoves} players={players}/>
       </Route>
-      <Route exact path="/postGame" component={PostGame}/>
+      <Route exact path="/postGame">
+        <PostGame moves={moves} players={players}/>
+      </Route>
     </div>
   );
 }

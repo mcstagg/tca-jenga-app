@@ -1,14 +1,17 @@
 import React from 'react';
 
-const Results = (props) => {
-  
+const Results = ({players, moves}) => {
+  let numMovesPlayer1 = 0;
+  moves.map(move => move.playerName === players[0].name && numMovesPlayer1++);
+  let numMovesPlayer2 = 0;
+  moves.map(move => move.playerName === players[1].name && numMovesPlayer2++);
   return (
     <div className="">
     <div className="results card-panel light-blue lighten-1 center">
-      <h3 className="white-text results">Winner! Mike</h3>
+      <h3 className="white-text results">Winner! {players[0].name}</h3>
     </div>
     <div className="row">
-      <h4 className="col s12 indi-stats">Mike's Stats</h4>
+      <h4 className="col s12 indi-stats">{players[0].name}'s Stats</h4>
     </div>
     <table className="">
     <tbody>
@@ -19,17 +22,17 @@ const Results = (props) => {
       </tr>
       <tr className="post-text">
         <td className="post-stats">
-          Number of Moves: 32
+          Number of Moves: {1}
         </td>
       </tr>
       </tbody>
     </table>
 
     <div className="results2 p-2 card-panel purple lighten-1 center">
-      <h3 className="white-text results mt-0">Loser! Travis</h3>
+      <h3 className="white-text results mt-0">Loser! {players[1].name}</h3>
     </div>
     <div className="row">
-      <h4 className="col s12 indi-stats">Travis's Stats</h4>
+      <h4 className="col s12 indi-stats">{players[1].name}'s Stats</h4>
     </div>
     <table className="">
       <tbody>
@@ -40,7 +43,7 @@ const Results = (props) => {
       </tr>
       <tr className="post-text">
         <td className="post-stats">
-          Number of Moves: 32
+          Number of Moves: {2}
         </td>
       </tr>
       </tbody>
@@ -63,7 +66,7 @@ const Results = (props) => {
       </tr>
       <tr className="post-text">
         <td className="post-stats">
-          Total Moves: 64
+          Total Moves: {moves.length}
         </td>
       </tr>
       <tr className="post-text">
