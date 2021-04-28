@@ -13,6 +13,7 @@ function App() {
 
   const [players, setPlayers] = useState([]);
   const [moves, setMoves] = useState([]);
+  
   return (
     <div className="jenga container">
       <Nav />

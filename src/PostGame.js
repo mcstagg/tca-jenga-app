@@ -15,7 +15,8 @@ const PostGame = ({ players, moves }) => {
             href="/gameplay"
             className={`waves-effect waves-light btn-large col s4 m3 valign-wrapper buttons deep-orange darken-1 rematch-btn`}
           >
-            Rematch<i className="material-icons"></i>
+            Rematch
+            <i className="material-icons"></i>
           </a>
         }
         quitButton={
@@ -23,11 +24,21 @@ const PostGame = ({ players, moves }) => {
             href="/"
             className={`waves-effect waves-light btn-large col s4 m3 valign-wrapper buttons purple lighten-1 rematch-btn`}
           >
-            QUIT<i className="material-icons"></i>
+            QUIT
+            <i className="material-icons"></i>
           </a>
         }
       />
-      {moves.length > 0 && <Results players={players} moves={moves} />}
+
+      {
+        moves.length > 0 
+        && 
+        <Results 
+          players={players} 
+          moves={moves} 
+        />
+      }
+
       <Footer
         h4text="Rematch?"
         h4textcol="col s6 m6"
@@ -38,7 +49,8 @@ const PostGame = ({ players, moves }) => {
             href="/gameplay"
             className={`waves-effect waves-light btn-large col s4 m3 valign-wrapper buttons deep-orange darken-1 rematch-btn`}
           >
-            Rematch<i className="material-icons"></i>
+            Rematch
+            <i className="material-icons"></i>
           </a>
         }
         quitButton={
@@ -46,7 +58,8 @@ const PostGame = ({ players, moves }) => {
             href="/"
             className={`waves-effect waves-light btn-large col s4 m3 valign-wrapper buttons purple lighten-1 rematch-btn`}
           >
-            QUIT<i className="material-icons"></i>
+            QUIT
+            <i className="material-icons"></i>
           </a>
         }
       />
