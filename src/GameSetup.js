@@ -14,7 +14,27 @@ const GameSetup = ({ players, setPlayers }) => {
   const [modalShow, setModalShow] = useState(false);
   const [formIsValid, setFormIsValid] = useState(false);
 
-  const clickHandler = () => {
+  //Handles the add player event upon add player button click
+  const addPlayer = (playerName) => {
+
+    setPlayers(
+      players.concat({
+        name: playerName, 
+        checked: false
+      })
+    );
+  };
+
+  //Handles the checkbox event in the choose player form
+  const handleChecked = (index, checked) => {
+
+    let newPlayers = players.slice();
+    newPlayers[index].checked=checked;
+    setPlayers(newPlayers);
+  };
+
+  //Handles the click event that starts the game
+  const handleStart = () => {
 
     let numChecked = 0;
 
@@ -26,23 +46,8 @@ const GameSetup = ({ players, setPlayers }) => {
       setModalShow(true);
     } else {
       history.push('/gameplay');
-    }
-  }
-
-  const handleChecked = (index, checked) => {
-    let newPlayers = players.slice();
-    newPlayers[index].checked=checked;
-    setPlayers(newPlayers);
-  }
-
-  const addPlayer = (playerName) => {
-    setPlayers(
-      players.concat({
-        name: playerName, 
-        checked: false
-      })
-    );
-  }
+    };
+  };
 
   return (
 
@@ -57,7 +62,7 @@ const GameSetup = ({ players, setPlayers }) => {
               `waves-effect waves-light btn-large col s6 m3 offset-s3-m5 valign-wrapper purple lighten-1 buttons`
             } 
             onClick={
-              clickHandler
+              handleStart
             }
           >
             START GAME
@@ -86,12 +91,15 @@ const GameSetup = ({ players, setPlayers }) => {
         moveButton={
           <a 
             className={
-            `waves-effect waves-light btn-large col s4 m3 valign-wrapper purple lighten-1 buttons`
+              `waves-effect waves-light btn-large col s4 m3 valign-wrapper purple lighten-1 buttons`
             } 
-            onClick={clickHandler}>
-              <i className="material-icons play">
-                play_arrow
-              </i>
+            onClick={
+              handleStart
+            }
+          >
+            <i className="material-icons play">
+              play_arrow
+            </i>
           </a>
         } 
       />

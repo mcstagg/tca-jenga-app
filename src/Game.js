@@ -1,5 +1,7 @@
 import { React, useState } from "react";
-import Clock from "./Clock";
+import GameClock from "./GameClock";
+import MoveClock from "./MoveClock";
+import TotalClock from "./TotalClock";
 import { useHistory } from 'react-router-dom';
 
 const Game = ({ players, moves, setMoves }) => {
@@ -10,22 +12,23 @@ const Game = ({ players, moves, setMoves }) => {
   const [replacedOnRow, setReplacedOnRow] = useState("");
   const [replacedOnCol, setReplacedOnCol] = useState("");
   const [towerHeight, setTowerHeight] = useState(18);
+  const [fullRow, setFullRow] = useState(1);
   const [blocksReplaced, setBlocksReplaced] = useState(0);
   const [currentPlayerName, setCurrentPlayerName] = useState(players[0].name);
   
-
+  //Handles the move event on click of move button
   const moveHandler = () => {
 
     setMoves(
       [...moves, {
-        playerName: currentPlayerName
-        , removeFrom: [
-          parseInt(removedFromRow)
-          , parseInt(removedFromCol)
-        ]
-        , replacedOn: [
-          parseInt(replacedOnRow)
-          , parseInt(replacedOnCol)
+        playerName: currentPlayerName, 
+        removeFrom: [
+          parseInt(removedFromRow), 
+          parseInt(removedFromCol)
+        ], 
+        replacedOn: [
+          parseInt(replacedOnRow), 
+          parseInt(replacedOnCol)
         ]
       }]
     );
@@ -39,7 +42,10 @@ const Game = ({ players, moves, setMoves }) => {
     setReplacedOnCol("");
 
     // increment height of tower
-    setTowerHeight(towerHeight + 1);
+    setFullRow(fullRow + 1);
+    if (fullRow % 3 == 0) {
+      setTowerHeight(towerHeight + 1);
+    }
 
     // increment blocks replaced
     setBlocksReplaced(blocksReplaced + 1);
@@ -52,12 +58,14 @@ const Game = ({ players, moves, setMoves }) => {
     }
   };
 
+  // Handles the Jenga event on click of the Jenga button
   const jengaHandler = () => {
     // alert("Is the game over?");
     // alert("who caused the Jenga?");
     history.push("/postGame");
   };
 
+  //Handles the quit event on click of the Quit button
   const quitHandler = () => {
     alert("Are you sure you want to quit the game?");
   };
@@ -233,7 +241,7 @@ const Game = ({ players, moves, setMoves }) => {
               Game Clock
             </h5>
             <h3 className="white-text center time">
-              <Clock />
+              <GameClock />
             </h3>
           </div>
         </div>
@@ -244,7 +252,7 @@ const Game = ({ players, moves, setMoves }) => {
               Move Timer
             </h5>
             <h3 className="white-text time">
-              00:04:20
+              <MoveClock />
             </h3>
           </div>
         </div>
@@ -255,7 +263,7 @@ const Game = ({ players, moves, setMoves }) => {
               Total Time
             </h5>
             <h3 className="white-text time">
-              00:18:88
+              <TotalClock />
             </h3>
           </div>
         </div>
