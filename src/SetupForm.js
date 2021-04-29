@@ -60,7 +60,7 @@ const SetupForm = ({ addPlayer, handleChecked, players }) => {
               players.map(
                 (player, index) => (
 
-                  <p className="">
+                  <p key={index} className="">
                     <label>
                       <input 
                         checked={player.checked} 

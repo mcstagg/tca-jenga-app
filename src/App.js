@@ -12,7 +12,13 @@ import './App.css';
 function App() {
 
   const [players, setPlayers] = useState([]);
-  const [moves, setMoves] = useState([]);
+  const [game, setGame] = useState({
+    moves: [],
+    towerHeight: 18,
+    gameTime: null,
+    winnerName: null,
+    loserName: null
+  });
   
   return (
 
@@ -31,14 +37,14 @@ function App() {
       </Route>
       <Route exact path="/gameplay">
         <Gameplay 
-          moves={moves} 
-          setMoves={setMoves}
+          game={game} 
+          setGame={setGame}
           players={players}
         />
       </Route>
       <Route exact path="/postGame">
         <PostGame 
-          moves={moves} 
+          game={game} 
           players={players}
         />
       </Route>

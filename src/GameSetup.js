@@ -20,14 +20,13 @@ const GameSetup = ({ players, setPlayers }) => {
     setPlayers(
       players.concat({
         name: playerName, 
-        checked: false
+        checked: true
       })
     );
   };
 
   //Handles the checkbox event in the choose player form
   const handleChecked = (index, checked) => {
-
     let newPlayers = players.slice();
     newPlayers[index].checked=checked;
     setPlayers(newPlayers);

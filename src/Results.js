@@ -1,15 +1,16 @@
 import React from 'react';
 
-const Results = ({ players, moves }) => {
+const Results = ({ players, game }) => {
+  const { moves, gameTime, towerHeight, winnerPlayer, loserPlayer } = game;
 
   let numMovesPlayer1 = 0;
   moves.map(
-    move => move.playerName === players[0].name && numMovesPlayer1++
+    move => move.player.name === players[0].name && numMovesPlayer1++
   );
 
   let numMovesPlayer2 = 0;
   moves.map(
-    move => move.playerName === players[1].name && numMovesPlayer2++
+    move => move.player.name === players[1].name && numMovesPlayer2++
   );
 
   return (
@@ -18,13 +19,13 @@ const Results = ({ players, moves }) => {
 
       <div className="results card-panel light-blue lighten-1 center">
         <h3 className="white-text results">
-          Winner! {players[0].name}
+          Winner! {winnerPlayer.name}
         </h3>
       </div>
 
-      <div className="row">
+      <div classNames="row">
         <h4 className="col s12 indi-stats">
-          {players[0].name}'s Stats
+          {winnerPlayer.name}'s Stats
         </h4>
       </div>
 
@@ -37,7 +38,7 @@ const Results = ({ players, moves }) => {
           </tr>
           <tr className="post-text">
             <td className="post-stats">
-              Number of Moves: {1}
+              Number of Moves: {numMovesPlayer1}
             </td>
           </tr>
         </tbody>
@@ -45,13 +46,13 @@ const Results = ({ players, moves }) => {
   
       <div className="results2 p-2 card-panel purple lighten-1 center">
         <h3 className="white-text results mt-0">
-          Loser! {players[1].name}
+          Loser! {loserPlayer.name}
         </h3>
       </div>
 
       <div className="row">
         <h4 className="col s12 indi-stats">
-          {players[1].name}'s Stats
+          {loserPlayer.name}'s Stats
         </h4>
       </div>
 
@@ -64,7 +65,7 @@ const Results = ({ players, moves }) => {
           </tr>
           <tr className="post-text">
             <td className="post-stats">
-              Number of Moves: {2}
+              Number of Moves: {numMovesPlayer2}
             </td>
           </tr>
         </tbody>
@@ -86,7 +87,7 @@ const Results = ({ players, moves }) => {
         <tbody>
           <tr className="post-text">
             <td className="post-stats">
-              Game Time: 01:22:14
+              Game Time: {gameTime}
             </td>
           </tr>
           <tr className="post-text">
@@ -96,12 +97,12 @@ const Results = ({ players, moves }) => {
           </tr>
           <tr className="post-text">
             <td className="post-stats">
-              Max Tower Height: 39
+              Max Tower Height: {towerHeight}
             </td>
           </tr>
           <tr className="post-text">
             <td className="post-stats">
-              JENGA Caused By: Travis
+              JENGA Caused By: {loserPlayer.name}
             </td>
           </tr>
           <tr className="post-text">

@@ -1,7 +1,7 @@
 import React from 'react';
 import Game from './Game';
 
-const Gameplay = ({ moves, setMoves, players }) => {
+const Gameplay = ({ game, setGame, players }) => {
 
   return (
 
@@ -9,8 +9,8 @@ const Gameplay = ({ moves, setMoves, players }) => {
       {
         players.length >= 2
         && 
-        <Game moves={moves}
-              setMoves={setMoves} 
+        <Game game={game}
+              setGame={setGame} 
               players={players}
         />
       }

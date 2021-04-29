@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Results from "./Results";
 
-const PostGame = ({ players, moves }) => {
+const PostGame = ({ players, game }) => {
   return (
     <>
       <Header
@@ -31,11 +31,11 @@ const PostGame = ({ players, moves }) => {
       />
 
       {
-        moves.length > 0 
+        game.moves.length > 0 
         && 
         <Results 
           players={players} 
-          moves={moves} 
+          game={game} 
         />
       }
 
