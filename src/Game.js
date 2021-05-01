@@ -4,6 +4,7 @@ import GameClock from "./GameClock";
 import MoveClock from "./MoveClock";
 import TotalClock from "./TotalClock";
 import { useHistory } from "react-router-dom";
+import moment from 'moment';
 
 const Game = ({ players, game, setGame }) => {
   const history = useHistory();
@@ -17,6 +18,11 @@ const Game = ({ players, game, setGame }) => {
   const [blocksReplaced, setBlocksReplaced] = useState(0);
   const [currentPlayer, setCurrentPlayer] = useState(players[0]);
   const gameTime = useRef("");
+  const moveTimeElapsed = useRef(0);
+  const player1TotalTime = useRef(0);
+  const player2TotalTime = useRef(0);
+  const [moveStartTime, setMoveStartTime] = useState(0);
+  const [totalStartTime, setTotalStartTime] = useState(Date.now());
 
   //Handles the move event on click of move button
   const moveHandler = () => {
@@ -49,12 +55,23 @@ const Game = ({ players, game, setGame }) => {
     // increment blocks replaced
     setBlocksReplaced(blocksReplaced + 1);
 
+      
+    // add move time to playerTotalTime
+    
+    
+
     // switch player
     if (currentPlayer.name === players[0].name) {
       setCurrentPlayer(players[1]);
     } else {
       setCurrentPlayer(players[0]);
     }
+
+    // reset move time
+    setMoveStartTime(Date.now());
+
+    // set total total time to display current player's totaltime
+    setTotalStartTime(player1TotalTime);
   };
 
   // Handles the Jenga event on click of the Jenga button
@@ -66,13 +83,14 @@ const Game = ({ players, game, setGame }) => {
     setModalShow(true);
   };
 
-  const jengaModalClickHandler = () => {
+
+  const onWinnerClick = (winner, loser) => {
     setGame({
       ...game,
       gameTime: gameTime.current,
       towerHeight: towerHeight,
-      winnerPlayer: players[0],
-      loserPlayer: players[1],
+      winnerPlayer: winner,
+      loserPlayer: loser,
     });
     history.push("/postGame");
   };
@@ -81,6 +99,10 @@ const Game = ({ players, game, setGame }) => {
     gameTime.current = time;
   };
 
+  const setMoveTimeElapsed = (seconds) => {
+    moveTimeElapsed.current = seconds;
+  }
+
   //Handles the quit event on click of the Quit button
   const quitHandler = () => {
     alert("Are you sure you want to quit the game?");
@@ -88,7 +110,12 @@ const Game = ({ players, game, setGame }) => {
 
   return (
     <>
-      <JengaModal show={modalShow} player1Name={players[0].name} player2Name={players[1].name} onHide={() => setModalShow(false)} />
+      <JengaModal
+        show={modalShow}
+        player1={players[0]}
+        player2={players[1]}
+        onWinnerClick={onWinnerClick}
+      />
       <div className={`row blue darken-1 header mbp valign-wrapper game-head`}>
         <h5 className={`col s3 m3 header-text game-pad htext-hide`}>
           Gameplay
@@ -216,7 +243,7 @@ const Game = ({ players, game, setGame }) => {
           <div className="clocks card-panel light-blue lighten-1 center">
             <h5 className="clock">Game Clock</h5>
             <h3 className="white-text center time">
-              <GameClock setTime={setGameTime} />
+              <GameClock setTime={setGameTime}/>
             </h3>
           </div>
         </div>
@@ -225,7 +252,7 @@ const Game = ({ players, game, setGame }) => {
           <div className="clocks card-panel blue darken-1 center">
             <h5 className="clock">Move Timer</h5>
             <h3 className="white-text time">
-              <MoveClock />
+              <MoveClock setTimeElapsed={setMoveTimeElapsed} startTimeSeconds={moveStartTime} />
             </h3>
           </div>
         </div>
@@ -234,7 +261,7 @@ const Game = ({ players, game, setGame }) => {
           <div className="clocks card-panel light-blue lighten-1 center">
             <h5 className="clock">Total Time</h5>
             <h3 className="white-text time">
-              <TotalClock />
+              <TotalClock startTime={totalStartTime} />
             </h3>
           </div>
         </div>

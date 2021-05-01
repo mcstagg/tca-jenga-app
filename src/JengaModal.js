@@ -2,7 +2,7 @@ import react from 'react';
 import BModal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-function JengaModal({player1Name, player2Name, onHide, ...rest}) {
+function JengaModal({player1, player2, onHide, onWinnerClick, ...rest}) {
     return (
       <BModal
         {...rest}
@@ -20,8 +20,8 @@ function JengaModal({player1Name, player2Name, onHide, ...rest}) {
             Please select the culprit.
           </p>
 
-          <Button>{player1Name}</Button>
-          <Button>{player2Name}</Button>
+          <Button onClick={() => onWinnerClick(player1, player2)}>{player1.name}</Button>
+          <Button onClick={() => onWinnerClick(player2, player1)}>{player2.name}</Button>
         </BModal.Body>
         <BModal.Footer>
           <Button onClick={onHide}>Close</Button>

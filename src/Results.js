@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Results = ({ players, game }) => {
-  const { moves, gameTime, towerHeight, winnerPlayer, loserPlayer } = game;
+  let { moves, gameTime, towerHeight, winnerPlayer, loserPlayer } = game;
 
   let numMovesPlayer1 = 0;
   moves.map(

@@ -34,7 +34,6 @@ const GameSetup = ({ players, setPlayers }) => {
 
   //Handles the click event that starts the game
   const handleStart = () => {
-
     let numChecked = 0;
 
     players.map(
