@@ -1,14 +1,16 @@
 import { React, useState, useRef } from "react";
 import JengaModal from "./JengaModal";
+import QuitModal from './QuitModal';
 import GameClock from "./GameClock";
 import MoveClock from "./MoveClock";
 import TotalClock from "./TotalClock";
 import { useHistory } from "react-router-dom";
 import moment from 'moment';
 
-const Game = ({ players, game, setGame }) => {
+const Game = ({ players, game, setGame, gamesPlayed, setGamesPlayed }) => {
   const history = useHistory();
-  const [modalShow, setModalShow] = useState(false);
+  const [jengaModalShow, setJengaModalShow] = useState(false);
+  const [quitModalShow, setQuitModalShow] = useState(false);
   const [removedFromRow, setRemovedFromRow] = useState("");
   const [removedFromCol, setRemovedFromCol] = useState("");
   const [replacedOnRow, setReplacedOnRow] = useState("");
@@ -76,22 +78,29 @@ const Game = ({ players, game, setGame }) => {
 
   // Handles the Jenga event on click of the Jenga button
   const jengaHandler = () => {
-    // alert("Is the game over?");
-    // alert("who caused the Jenga?");
+    setJengaModalShow(true);
+  };
 
-    // show modal
-    setModalShow(true);
+  const quitHandler = () => {
+    setQuitModalShow(true);
   };
 
 
-  const onWinnerClick = (winner, loser) => {
-    setGame({
+  const onWinnerClick = (jengaStats) => {
+    let finalGame = {
       ...game,
       gameTime: gameTime.current,
       towerHeight: towerHeight,
-      winnerPlayer: winner,
-      loserPlayer: loser,
-    });
+      winnerPlayer: jengaStats.winner,
+      loserPlayer: jengaStats.loser,
+      jenga: {
+        removedFrom: [jengaStats.removedFromCol, jengaStats.removedFromRow],
+        replacedOn: [jengaStats.removedFromCol, jengaStats.removedFromRow]
+      }
+    }
+    setGame(finalGame);
+    setGamesPlayed([...gamesPlayed, finalGame]);
+
     history.push("/postGame");
   };
 
@@ -104,17 +113,23 @@ const Game = ({ players, game, setGame }) => {
   }
 
   //Handles the quit event on click of the Quit button
-  const quitHandler = () => {
-    alert("Are you sure you want to quit the game?");
+  const onQuit = () => {
+    history.push('/');
   };
 
   return (
     <>
       <JengaModal
-        show={modalShow}
+        show={jengaModalShow}
+        onHide={() => setJengaModalShow(false)}
         player1={players[0]}
         player2={players[1]}
         onWinnerClick={onWinnerClick}
+      />
+      <QuitModal
+        show={quitModalShow}
+        onHide={() => setQuitModalShow(false)}
+        onQuit={onQuit}
       />
       <div className={`row blue darken-1 header mbp valign-wrapper game-head`}>
         <h5 className={`col s3 m3 header-text game-pad htext-hide`}>
@@ -137,14 +152,13 @@ const Game = ({ players, game, setGame }) => {
           <i className="large material-icons"></i>
         </button>
 
-        <a
-          href="/"
+        <button
           className={`waves-effect waves-light btn-large col s4 sm4 m3 valign-wrapper purple lighten-1 buttons`}
           onClick={quitHandler}
         >
           QUIT
           <i className="large material-icons"></i>
-        </a>
+        </button>
       </div>
 
       <div className="row marquis-mt">
@@ -285,14 +299,13 @@ const Game = ({ players, game, setGame }) => {
           JENGA!
           <i className="large material-icons"></i>
         </button>
-        <a
-          href="/"
+        <button
           className={`waves-effect waves-light btn-large col s4 sm4 m3 valign-wrapper purple lighten-1 buttons`}
           onClick={quitHandler}
         >
           QUIT
           <i className="large material-icons"></i>
-        </a>
+        </button>
       </div>
     </>
   );

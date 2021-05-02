@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Table from './Table';
 
-const HomeStats = () => {
+const HomeStats = ({ gamesPlayed }) => {
 
   return (
     <>
@@ -23,7 +23,7 @@ const HomeStats = () => {
         } 
       />
 
-      <Table className="container"/>
+      <Table gamesPlayed={gamesPlayed} className="container"/>
 
       <Footer 
         h4text="Ready to Start?" 

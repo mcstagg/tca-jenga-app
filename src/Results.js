@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Results = ({ players, game }) => {
-  let { moves, gameTime, towerHeight, winnerPlayer, loserPlayer } = game;
+  let { moves, gameTime, towerHeight, winnerPlayer, loserPlayer, jenga } = game;
 
   let numMovesPlayer1 = 0;
   moves.map(
@@ -107,12 +107,12 @@ const Results = ({ players, game }) => {
           </tr>
           <tr className="post-text">
             <td className="post-stats">
-              Jenga Pulled From: Col 3 Row 9
+              Jenga Pulled From: Col {jenga.removedFrom[0]} Row {jenga.removedFrom[1]}
             </td>
           </tr>
           <tr className="post-text">
             <td className="post-stats">
-              Attempted: Row Col 2 Row 39
+              Attempted: Row Col {jenga.replacedOn[0]} Row {jenga.replacedOn[1]}
             </td>
           </tr>
         </tbody>

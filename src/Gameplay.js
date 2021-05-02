@@ -1,22 +1,20 @@
 import React from 'react';
 import Game from './Game';
 
-const Gameplay = ({ game, setGame, players }) => {
+const Gameplay = (props) => {
 
   return (
 
     <>
       {
-        players.length >= 2
+        props.players.length >= 2
         && 
-        <Game game={game}
-              setGame={setGame} 
-              players={players}
+        <Game {...props}
         />
       }
 
       {
-        players.length < 2 
+        props.players.length < 2 
         && 
         <h2>You need to set up the game...</h2>
       }
