@@ -1,4 +1,4 @@
-import { React, useState, useRef } from "react";
+import { React, useState, useRef, useEffect } from "react";
 import JengaModal from "./JengaModal";
 import QuitModal from './QuitModal';
 import GameClock from "./GameClock";
@@ -9,8 +9,12 @@ import moment from 'moment';
 
 const Game = ({ players, game, setGame, gamesPlayed, setGamesPlayed }) => {
   const history = useHistory();
+
+  // modals
   const [jengaModalShow, setJengaModalShow] = useState(false);
   const [quitModalShow, setQuitModalShow] = useState(false);
+
+  // inputs
   const [removedFromRow, setRemovedFromRow] = useState("");
   const [removedFromCol, setRemovedFromCol] = useState("");
   const [replacedOnRow, setReplacedOnRow] = useState("");
@@ -18,13 +22,30 @@ const Game = ({ players, game, setGame, gamesPlayed, setGamesPlayed }) => {
   const [towerHeight, setTowerHeight] = useState(18);
   const [fullRow, setFullRow] = useState(1);
   const [blocksReplaced, setBlocksReplaced] = useState(0);
-  const [currentPlayer, setCurrentPlayer] = useState(players[0]);
+
+  // players
+  const [player1, setPlayer1] = useState({});
+  const [player2, setPlayer2] = useState({});
+  const [currentPlayer, setCurrentPlayer] = useState({});
+
+  // game timer
   const gameTime = useRef("");
+
+  // move timer
   const moveTimeElapsed = useRef(0);
+  const [moveTimerReset, setMoveTimerReset] = useState(null);
+
+  // total timer
   const player1TotalTime = useRef(0);
   const player2TotalTime = useRef(0);
-  const [moveStartTime, setMoveStartTime] = useState(0);
-  const [totalStartTime, setTotalStartTime] = useState(Date.now());
+  const [currentPlayerTotalTimeSeconds, setCurrentPlayerTotalTimeSeconds] = useState(0);
+
+  useEffect(() => {
+    const checkedPlayers = players.filter(player => player.checked);
+    setPlayer1(checkedPlayers[0]);
+    setPlayer2(checkedPlayers[1]);
+    setCurrentPlayer(checkedPlayers[0]);
+  }, [players]);
 
   //Handles the move event on click of move button
   const moveHandler = () => {
@@ -56,24 +77,32 @@ const Game = ({ players, game, setGame, gamesPlayed, setGamesPlayed }) => {
 
     // increment blocks replaced
     setBlocksReplaced(blocksReplaced + 1);
-
       
-    // add move time to playerTotalTime
-    
-    
-
-    // switch player
-    if (currentPlayer.name === players[0].name) {
-      setCurrentPlayer(players[1]);
+    // add move time to playerTotalTime for current player
+    if (currentPlayer == player1){
+      player1TotalTime.current += moveTimeElapsed.current;
     } else {
-      setCurrentPlayer(players[0]);
+      player2TotalTime.current += moveTimeElapsed.current;
+    }
+
+    // switch player and update total time
+    if (currentPlayer === player1) {
+      setCurrentPlayer(player2);
+      setCurrentPlayerTotalTimeSeconds(player2TotalTime);
+    } else {
+      setCurrentPlayer(player1);
+      setCurrentPlayerTotalTimeSeconds(player1TotalTime);
     }
 
     // reset move time
-    setMoveStartTime(Date.now());
+    setMoveTimerReset(Date.now());
 
-    // set total total time to display current player's totaltime
-    setTotalStartTime(player1TotalTime);
+    
+    if (currentPlayer === player1) {
+      
+    } else {
+      setCurrentPlayer(player1);
+    }
   };
 
   // Handles the Jenga event on click of the Jenga button
@@ -84,7 +113,6 @@ const Game = ({ players, game, setGame, gamesPlayed, setGamesPlayed }) => {
   const quitHandler = () => {
     setQuitModalShow(true);
   };
-
 
   const onWinnerClick = (jengaStats) => {
     let finalGame = {
@@ -122,8 +150,8 @@ const Game = ({ players, game, setGame, gamesPlayed, setGamesPlayed }) => {
       <JengaModal
         show={jengaModalShow}
         onHide={() => setJengaModalShow(false)}
-        player1={players[0]}
-        player2={players[1]}
+        player1={player1}
+        player2={player2}
         onWinnerClick={onWinnerClick}
       />
       <QuitModal
@@ -164,7 +192,7 @@ const Game = ({ players, game, setGame, gamesPlayed, setGamesPlayed }) => {
       <div className="row marquis-mt">
         <div className="col s5 m5 names">
           <div className="card-panel light-blue lighten-1 blue-buttons center names2">
-            <h4 className="white-text names3">{players[0].name}</h4>
+            <h4 className="white-text names3">{player1.name}</h4>
           </div>
         </div>
 
@@ -176,7 +204,7 @@ const Game = ({ players, game, setGame, gamesPlayed, setGamesPlayed }) => {
 
         <div className="col s5 m5 names">
           <div className="card-panel light-blue lighten-1 blue-buttons center names2">
-            <h4 className="white-text names3">{players[1].name}</h4>
+            <h4 className="white-text names3">{player2.name}</h4>
           </div>
         </div>
       </div>
@@ -266,7 +294,7 @@ const Game = ({ players, game, setGame, gamesPlayed, setGamesPlayed }) => {
           <div className="clocks card-panel blue darken-1 center">
             <h5 className="clock">Move Timer</h5>
             <h3 className="white-text time">
-              <MoveClock setTimeElapsed={setMoveTimeElapsed} startTimeSeconds={moveStartTime} />
+              <MoveClock setTimeElapsed={setMoveTimeElapsed} resetTimerTrigger={moveTimerReset}/>
             </h3>
           </div>
         </div>
@@ -275,7 +303,7 @@ const Game = ({ players, game, setGame, gamesPlayed, setGamesPlayed }) => {
           <div className="clocks card-panel light-blue lighten-1 center">
             <h5 className="clock">Total Time</h5>
             <h3 className="white-text time">
-              <TotalClock startTime={totalStartTime} />
+              <TotalClock startTimeSeconds={currentPlayerTotalTimeSeconds}/>
             </h3>
           </div>
         </div>

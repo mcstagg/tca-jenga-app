@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Table from './Table';
+import { Link } from 'react-router-dom';
 
 const HomeStats = ({ gamesPlayed }) => {
 
@@ -12,14 +13,14 @@ const HomeStats = ({ gamesPlayed }) => {
         h4textcol="col s6 m9" 
         atts="head-text" 
         moveButton={
-          <a 
-            href="/gameSetup" 
+          <Link 
+            to="/gameSetup" 
             className={
               `waves-effect waves-light btn-large col s6 m3 valign-wrapper purple lighten-1 buttons`
             }
           >
             PLAY JENGA!
-          </a>
+          </Link>
         } 
       />
 
@@ -31,8 +32,8 @@ const HomeStats = ({ gamesPlayed }) => {
         att="mt-0" 
         atts="ready" 
         moveButton={
-          <a 
-            href="/gameSetup" 
+          <Link
+            to="/gameSetup" 
             className={
               `waves-effect waves-light btn-large col s4 m3 valign-wrapper purple lighten-1 buttons`
             }
@@ -40,7 +41,7 @@ const HomeStats = ({ gamesPlayed }) => {
             <i className="material-icons play">
               play_arrow
             </i>
-          </a>
+          </Link>
         }
       />
     </>

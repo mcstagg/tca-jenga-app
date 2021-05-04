@@ -9,23 +9,50 @@ const Table = ({ gamesPlayed }) => {
   useEffect(() => {
     let playerStats = {}; // => { "mike" => {wins: 1, loses: 2}, "tom" => {} }
 
+    // fill in playerStats by looping through all games...
     gamesPlayed.map((game) => {
+
+      const defaultStats = {
+        wins: 0, loses: 0, maxHeight: 0, winStreak: 0
+      };
+      
       let winnerName = game.winnerPlayer.name;
+      let loserName = game.loserPlayer.name;
+
+      // create stats object for winner and loser if they don't exist
       if (!playerStats[winnerName]) {
-        playerStats[winnerName] = { name: winnerName, wins: 0, loses: 0 };
+        playerStats[winnerName] = {...defaultStats};
+      }
+      if (!playerStats[loserName]) {
+        playerStats[loserName] = {...defaultStats};
       }
 
       let winnerStats = playerStats[winnerName];
-      winnerStats.wins += 1;
+      let loserStats = playerStats[loserName];
 
-      let loserName = game.loserPlayer.name;
-      if (!playerStats[loserName]) {
-        playerStats[loserName] = { name: loserName, wins: 0, loses: 0 };
+      // add win to winner's player stats and loss to loser's stats
+      winnerStats.wins += 1;
+      loserStats.loses += 1;
+
+      // update maxHeight
+      if (winnerStats.maxHeight < game.towerHeight) {
+        winnerStats.maxHeight = game.towerHeight;
+      }
+      if (loserStats.maxHeight < game.towerHeight) {
+        loserStats.maxHeight = game.towerHeight;
       }
 
-      let loserStats = playerStats[loserName];
-      loserStats.loses += 1;
+      // update win streak
+      winnerStats.winStreak++;
+      loserStats.winStreak = 0;
     });
+
+    // calculate win percentage for each player
+    for (var playerName in playerStats) {
+      let stats = playerStats[playerName];
+      stats.winPercentage = stats.wins / (stats.loses + stats.wins) * 100;
+      stats.winPercentage = stats.winPercentage.toFixed(2);
+    }
 
     let sorted = Object.entries(playerStats).sort((a, b) => {
       // a=> ["mike", {...}]; b => ["tom", {...}]
@@ -56,9 +83,9 @@ const Table = ({ gamesPlayed }) => {
             <td>{element[0]}</td>
             <td>{element[1].wins}</td>
             <td>{element[1].loses}</td>
-            <td>x%</td>
-            <td>x</td>
-            <td>x</td>
+            <td>{element[1].winPercentage}%</td>
+            <td>{element[1].maxHeight}</td>
+            <td>{element[1].winStreak}</td>
             <td>x</td>
           </tr>
         ))}

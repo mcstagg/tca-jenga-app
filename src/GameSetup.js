@@ -16,11 +16,10 @@ const GameSetup = ({ players, setPlayers }) => {
 
   //Handles the add player event upon add player button click
   const addPlayer = (playerName) => {
-
     setPlayers(
       players.concat({
         name: playerName, 
-        checked: true
+        checked: false
       })
     );
   };
