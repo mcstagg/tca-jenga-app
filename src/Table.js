@@ -73,7 +73,6 @@ const Table = ({ gamesPlayed }) => {
           <th>Win %</th>
           <th>Max Height</th>
           <th>Win Streak</th>
-          <th>Days Playing</th>
         </tr>
       </thead>
       <tbody className="tbody-txt">
@@ -86,7 +85,6 @@ const Table = ({ gamesPlayed }) => {
             <td>{element[1].winPercentage}%</td>
             <td>{element[1].maxHeight}</td>
             <td>{element[1].winStreak}</td>
-            <td>x</td>
           </tr>
         ))}
       </tbody>

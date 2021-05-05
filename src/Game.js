@@ -88,10 +88,10 @@ const Game = ({ players, game, setGame, gamesPlayed, setGamesPlayed }) => {
     // switch player and update total time
     if (currentPlayer === player1) {
       setCurrentPlayer(player2);
-      setCurrentPlayerTotalTimeSeconds(player2TotalTime);
+      setCurrentPlayerTotalTimeSeconds(player2TotalTime.current);
     } else {
       setCurrentPlayer(player1);
-      setCurrentPlayerTotalTimeSeconds(player1TotalTime);
+      setCurrentPlayerTotalTimeSeconds(player1TotalTime.current);
     }
 
     // reset move time
@@ -303,7 +303,7 @@ const Game = ({ players, game, setGame, gamesPlayed, setGamesPlayed }) => {
           <div className="clocks card-panel light-blue lighten-1 center">
             <h5 className="clock">Total Time</h5>
             <h3 className="white-text time">
-              <TotalClock startTimeSeconds={currentPlayerTotalTimeSeconds}/>
+              <TotalClock resetTimerTrigger={moveTimerReset} AddTimeSeconds={currentPlayerTotalTimeSeconds}/>
             </h3>
           </div>
         </div>
