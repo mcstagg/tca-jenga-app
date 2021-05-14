@@ -5,7 +5,6 @@ import GameClock from "./GameClock";
 import MoveClock from "./MoveClock";
 import TotalClock from "./TotalClock";
 import { useHistory } from "react-router-dom";
-import moment from 'moment';
 
 const Game = ({ players, game, setGame, gamesPlayed, setGamesPlayed }) => {
   const history = useHistory();
@@ -118,6 +117,8 @@ const Game = ({ players, game, setGame, gamesPlayed, setGamesPlayed }) => {
     let finalGame = {
       ...game,
       gameTime: gameTime.current,
+      player1time: player1TotalTime.current,
+      player2time: player2TotalTime.current,
       towerHeight: towerHeight,
       winnerPlayer: jengaStats.winner,
       loserPlayer: jengaStats.loser,

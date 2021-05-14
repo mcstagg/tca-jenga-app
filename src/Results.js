@@ -1,7 +1,14 @@
 import React from 'react';
 
 const Results = ({ players, game }) => {
-  let { moves, gameTime, towerHeight, winnerPlayer, loserPlayer, jenga } = game;
+  let { 
+    moves, 
+    gameTime, 
+    towerHeight, 
+    winnerPlayer, 
+    loserPlayer, 
+    jenga
+  } = game;
 
   let numMovesPlayer1 = 0;
   moves.map(
@@ -33,7 +40,7 @@ const Results = ({ players, game }) => {
         <tbody>
           <tr className="post-text">
             <td className="post-stats">
-              Player Time : 00:40:02
+              Player Time : 00:00:18
             </td>
           </tr>
           <tr className="post-text">
@@ -60,7 +67,7 @@ const Results = ({ players, game }) => {
         <tbody>
           <tr className="post-text">
             <td className="post-stats">
-              Player Time : 00:22:12
+              Player Time : 00:00:22
             </td>
           </tr>
           <tr className="post-text">
